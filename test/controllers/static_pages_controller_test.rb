@@ -11,8 +11,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get profile" do
-    get profile_path
+  test "should get manager" do
+    get manager_path
     assert_response :success
   end
 
