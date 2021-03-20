@@ -1,2 +1,21 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="homeTopics">
+  <img id="main">
+  <ul class="thumbnails"></ul>
+</div>
+
+<div class="content news">
+  <h1>News</h1>
+  <div class="contents">
+    news
+  </div>
+</div>
+
+<div class="content event">
+  <h1>Event</h1>
+  <div class="contents">
+    event
+  </div>
+</div>
+
+
+<%= javascript_pack_tag 'static_pages/home.js' %>

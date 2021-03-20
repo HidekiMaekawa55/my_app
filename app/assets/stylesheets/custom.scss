@@ -119,3 +119,68 @@ input {
     color: $state-danger-text;
   }
 }
+
+
+/* homepage */
+.homeTopics {
+  // width: 1000px;
+}
+
+.homeTopics img {
+  cursor: pointer;
+}
+
+#main {
+  width: 780px;
+  height: 520px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnails {
+  list-style: none;
+  width: 498px;
+  display: grid;
+  grid-template-columns: repeat(6, 78px);
+  gap: 5px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.thumbnails img {
+  width: 78px;
+  height: 52px;
+}
+
+.thumbnails li {
+  opacity: 0.6;
+}
+
+.thumbnails li:hover,
+.thumbnails li.current {
+  opacity: 1;
+}
+
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.contents {
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
