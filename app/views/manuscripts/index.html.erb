@@ -1,2 +1,6 @@
 <h1>Manuscripts#index</h1>
-<p>Find me in app/views/manuscripts/index.html.erb</p>
+<% @manuscripts.each do |manuscript| %>
+  <p><%= manuscript.title %></p>
+<% end %>
+
+<%= link_to "manuscript投稿", new_manuscript_path %>

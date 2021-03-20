@@ -1,2 +1,16 @@
-<h1>Manuscripts#new</h1>
-<p>Find me in app/views/manuscripts/new.html.erb</p>
+<%= provide(:title, 'Manuscript Form') %>
+<h1>News form</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(url: manuscripts_path, scope: :manuscript, local: true) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+      
+      <%= f.label :content %>
+      <%= f.text_field :content %>
+      
+      <%= f.submit "Create manuscript", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
