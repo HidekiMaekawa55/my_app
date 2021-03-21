@@ -2,7 +2,7 @@ class ManuscriptsController < ApplicationController
   before_action :admin_user, only: [:new, :create, :edit, :destroy]
   
   def index
-    @manuscripts = Manuscript.all.order("created_at DESC")
+    @manuscripts = Manuscript.all
   end
   
   def show
