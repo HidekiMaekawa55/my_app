@@ -3,8 +3,11 @@ class ApplicationController < ActionController::Base
   
   
   private
-  
+    
     def admin_user
-      redirect_to(root_url) unless current_user.admin?
+      unless current_user && current_user.admin?
+        redirect_to root_url
+        flash[:danger] = "You are not an administrator."
+      end
     end
 end

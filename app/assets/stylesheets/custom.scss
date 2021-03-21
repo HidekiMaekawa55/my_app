@@ -123,7 +123,7 @@ input {
 
 /* homepage */
 .homeTopics {
-  // width: 1000px;
+  margin-top: 50px;
 }
 
 .homeTopics img {
@@ -172,13 +172,47 @@ input {
   margin-top: 80px;
 }
 
-.contents {
-  margin: 0 auto;
-  width: 600px;
-  height: 300px;
-  background: rgba(0, 0, 0, 0.1);
+.content > h1 {
+  margin-bottom: 20px;
 }
 
+.contents {
+  margin: 0 auto;
+  width: 800px;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
+}
+
+.contents h2 {
+  font-size: 20px;
+}
+
+
+/* post */
+
+.manuscript_index {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 800px;
+}
+
+.news_post {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+.news_box {
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+.news_box h1 {
+  font-size: 20px;
+}
 
 
 

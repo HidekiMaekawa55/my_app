@@ -4,10 +4,13 @@
 </div>
 
 <div class="content news">
-  <h1>News</h1>
-  <div class="contents">
-    news
-  </div>
+  <h1>University News</h1>
+  <% @manuscripts.each do |manuscript| %>
+    <div class="contents">
+      <h2><%= link_to manuscript.title, manuscript_path(manuscript) %></h2>
+      <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
+    </div>
+  <% end %>
 </div>
 
 <div class="content event">

@@ -1,9 +1,21 @@
-<h1>Manuscripts#index</h1>
-<% @manuscripts.each do |manuscript| %>
-  <p><%= manuscript.title %></p>
-  <%= link_to "編集", edit_manuscript_path(manuscript) %>
-  <%= link_to "削除", manuscript_path(manuscript), method: :delete,
-                                   data: { confirm: "You sure?" }%>
-<% end %>
-
-<p><%= link_to "manuscript投稿", new_manuscript_path %></p>
+<div class="manuscript_index">
+  <h1>University News</h1>
+  
+  <% if current_user && current_user.admin? %>
+    <div class="news_post">
+      <%= link_to "News投稿", new_manuscript_path %>
+    </div>
+  <% end %>
+  
+  <% @manuscripts.each do |manuscript| %>
+    <div class="news_box">
+      <h1><%= link_to manuscript.title, manuscript_path(manuscript) %></h1>
+      <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
+      <% if current_user && current_user.admin? %>
+        <%= link_to "編集", edit_manuscript_path(manuscript) %>
+        <%= link_to "削除", manuscript_path(manuscript), method: :delete,
+                                         data: { confirm: "You sure?" }%>
+      <% end %>
+    </div>
+  <% end %>
+</div>
