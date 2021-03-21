@@ -1,6 +1,9 @@
 <h1>Manuscripts#index</h1>
 <% @manuscripts.each do |manuscript| %>
   <p><%= manuscript.title %></p>
+  <%= link_to "編集", edit_manuscript_path(manuscript) %>
+  <%= link_to "削除", manuscript_path(manuscript), method: :delete,
+                                   data: { confirm: "You sure?" }%>
 <% end %>
 
-<%= link_to "manuscript投稿", new_manuscript_path %>
+<p><%= link_to "manuscript投稿", new_manuscript_path %></p>
