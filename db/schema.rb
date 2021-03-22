@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_111528) do
+ActiveRecord::Schema.define(version: 2021_03_22_071853) do
+
+  create_table "credits", force: :cascade do |t|
+    t.string "undergraduate"
+    t.string "department"
+    t.string "class_name"
+    t.string "teacher_name"
+    t.string "fulfillment"
+    t.string "ease"
+    t.string "attendance"
+    t.string "mid_test_format"
+    t.string "final_test_format"
+    t.string "item"
+    t.string "textbook"
+    t.text "comment"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "manuscripts", force: :cascade do |t|
     t.string "title"
