@@ -10,7 +10,14 @@ class CreditsController < ApplicationController
     @credit = Credit.new
   end
   
-  def credit
+  def create
+    @credit = Credit.new(credit_params)
+    if @credit.save
+      flash[:success] = "Thank you your university information"
+      redirect_to credits_path
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -21,4 +28,13 @@ class CreditsController < ApplicationController
   
   def destroy
   end
+  
+  
+  private
+  
+    def credit_params
+      params.require(:credit).permit(:undergraduate, :department, :class_name, :teacher_name,
+                                     :fulfillment, :ease, :attendance, :mid_test_format,
+                                     :final_test_format, :item, :textbook, :comment)
+    end
 end
