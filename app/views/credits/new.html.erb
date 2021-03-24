@@ -1,2 +1,130 @@
-<h1>Credits#new</h1>
-<p>Find me in app/views/credits/new.html.erb</p>
+<% provide(:title, '楽単情報投稿') %>
+<h1>Credit form</h1>
+
+<div class="row credit-form">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @credit, local: true) do |f| %>
+      
+      <dl>
+        <dt>学部学科選択</dt>
+        <dd>
+          学部：
+          <%= f.select :undergraduate, [["人文学部", "人文学部"],
+          ["外国語学部", "外国語学部"], ["経済学部", "経済学部"],
+          ["経営学部", "経営学部"], ["法学部", "法学部"],
+          ["総合政策学部", "総合政策学部"], ["理工学部", "理工学部"],
+          ["国際教養学部", "国際教養学部"]], {include_blank: "選択して下さい"} %>
+      
+          学科：
+          <%= f.select :department, [], {include_blank: "選択してください"}, disabled: :true %>
+        </dd>
+        <dt>授業名</dt>
+        <dd></dd>
+        <dt>教授・講師名</dt>
+        <dd></dd>
+        <dt>評価</dt>
+        <dd></dd>
+      </dl>
+      
+      <div class="radio">
+        <table border="1">
+          <tr>
+            <td>内容充実度</td>
+            <td>
+              <%= f.label :fulfillment_5, "とても充実" %>
+              <%= f.radio_button :fulfillment, :"5" %>
+              <%= f.label :fullfillment_4, "充実" %>
+              <%= f.radio_button :fulfillment, :"4" %>
+              <%= f.label :fullfillment_3, "どちらでもない" %>
+              <%= f.radio_button :fulfillment, :"3" %>
+              <%= f.label :fullfillment_2, "空虚" %>
+              <%= f.radio_button :fulfillment, :"2" %>
+              <%= f.label :fullfillment_1, "とても空虚" %>
+              <%= f.radio_button :fulfillment, :"1" %>
+            </td>
+          </tr>
+          <tr>
+            <td>単位取得度</td>
+            <td>
+              <%= f.label :ease_5, "とても簡単" %>
+              <%= f.radio_button :ease, :"5" %>
+              <%= f.label :ease_4, "簡単" %>
+              <%= f.radio_button :ease, :"4" %>
+              <%= f.label :ease_3, "どちらでもない" %>
+              <%= f.radio_button :ease, :"3" %>
+              <%= f.label :ease_2, "難しい" %>
+              <%= f.radio_button :ease, :"2" %>
+              <%= f.label :ease_1, "とても難しい" %>
+              <%= f.radio_button :ease, :"1" %>
+            </td>
+          </tr>
+          <tr>
+            <td>出席</td>
+            <td>
+              <%= f.label :attendance_3, "ほぼ毎回とる" %>
+              <%= f.radio_button :attendance, :"3" %>
+              <%= f.label :attendance_2, "たまにとる" %>
+              <%= f.radio_button :attendance, :"2" %>
+              <%= f.label :attendance_1, "とらない" %>
+              <%= f.radio_button :attendance, :"1" %>
+            </td>
+          </tr>
+          <tr>
+            <td>テスト形式(中間)</td>
+            <td>
+              <%= f.label :mid_test_format_4, "テストのみ" %>
+              <%= f.radio_button :mid_test_format, :"4" %>
+              <%= f.label :mid_test_format_3, "レポートのみ" %>
+              <%= f.radio_button :mid_test_format, :"3" %>
+              <%= f.label :mid_test_format_2, "両方あり" %>
+              <%= f.radio_button :mid_test_format, :"2" %>
+              <%= f.label :mid_test_format_1, "両方なし" %>
+              <%= f.radio_button :mid_test_format, :"1" %>
+            </td>
+          </tr>
+          <tr>
+            <td>テスト形式(期末)</td>
+            <td>
+              <%= f.label :final_test_format_4, "テストのみ" %>
+              <%= f.radio_button :final_test_format, :"4" %>
+              <%= f.label :final_test_format_3, "レポートのみ" %>
+              <%= f.radio_button :final_test_format, :"3" %>
+              <%= f.label :final_test_format_2, "両方あり" %>
+              <%= f.radio_button :final_test_format, :"2" %>
+              <%= f.label :final_test_format_1, "両方なし" %>
+              <%= f.radio_button :final_test_format, :"1" %>
+            </td>
+          </tr>
+          <tr>
+            <td>テスト時の持ち込み</td>
+            <td>
+              <%= f.label :item_3, "持ち込み可能" %>
+              <%= f.radio_button :item, :"3" %>
+              <%= f.label :item_2, "持ち込み不可能" %>
+              <%= f.radio_button :item, :"2" %>
+              <%= f.label :item_1, "テストなし" %>
+              <%= f.radio_button :item, :"1" %>
+            </td>
+          </tr>
+          <tr>
+            <td>教科書</td>
+            <td>
+              <%= f.label :textbook_2, "教科書必要" %>
+              <%= f.radio_button :textbook, :"2" %>
+              <%= f.label :textbook_1, "教科書なし、または不要" %>
+              <%= f.radio_button :textbook, :"1" %>
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+      <%= f.label :comment %>
+      <%= f.text_area :comment %>
+      
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'credits/new.js' %>
+

@@ -103,6 +103,20 @@ input {
 }
 
 
+.radio [type="radio"] {
+  display: inline-block;
+  width: 55px;
+}
+
+.radio table  {
+  width: 600px;
+}
+
+.credit_form {
+  
+}
+
+
 /* error_messages */
 
 #error_explanation {
@@ -213,8 +227,5 @@ input {
 .news_box h1 {
   font-size: 20px;
 }
-
-
-
 
 
