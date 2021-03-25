@@ -17,7 +17,7 @@ class ManuscriptsController < ApplicationController
     if @manuscript.save
       redirect_to manuscripts_path
     else
-      flash.now[:danger] = "invalid"
+      flash.now[:danger] = @manuscript.errors.full_messages
       render 'new'
     end
   end
@@ -42,8 +42,8 @@ class ManuscriptsController < ApplicationController
       flash[:success] = "complite"
       redirect_to manuscripts_path
     else
-      flash.now[:danger] = "error"
-      render 'index'
+      flash[:danger] = "error"
+      redirect_to manuscripts_path
     end
   end
   

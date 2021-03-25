@@ -1,9 +1,8 @@
 class CreditsController < ApplicationController
+  before_action :admin_user, only: [:destroy]
   
   def index
-  end
-
-  def show
+    @credits = Credit.all.order("created_at DESC")
   end
 
   def new
@@ -13,20 +12,23 @@ class CreditsController < ApplicationController
   def create
     @credit = Credit.new(credit_params)
     if @credit.save
-      flash[:success] = "Thank you your university information"
+      flash[:success] = "Thank you for your university information"
       redirect_to credits_path
     else
-      render 'new'
+      flash.now[:danger] = @credit.errors.full_messages
+      render :new
     end
-  end
-
-  def edit
-  end
-  
-  def update
   end
   
   def destroy
+    @credit = Credit.find(params[:id])
+    if @credit.destroy
+      flash[:success] = "complite"
+      redirect_to credits_path
+    else
+      flash[:danger] = "error"
+      redirect_to credits_path
+    end
   end
   
   

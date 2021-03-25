@@ -6,17 +6,7 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
              
-Manuscript.create!(titie: "Example",
-                   content: "example,example,example,example")
-
-Manuscript.create!(titie: "Example",
-                   content: "example,example,example,example")
-                   
-Manuscript.create!(titie: "Example",
-                   content: "example,example,example,example")                
-                   
-Manuscript.create!(titie: "Example",
-                   content: "example,example,example,example")                   
-                   
-Manuscript.create!(titie: "Example",
-                   content: "example,example,example,example")                   
+10.times do             
+    Manuscript.create!(title: "Example",
+                       content: "example,example,example,example")
+end

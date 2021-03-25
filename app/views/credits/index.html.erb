@@ -1,2 +1,26 @@
-<h1>Credit</h1>
-<%= link_to "投稿", new_credit_path %>
+<div class="credit_index">
+  <h1>Easy Credit Infromation</h1>
+  <%= link_to "投稿", new_credit_path %> 
+  
+  <% @credits.each do |credit| %>
+    <div class="credit_box">
+      <p><%= credit.undergraduate %></p>
+      <p><%= credit.department %></p>
+      <p><%= credit.class_name %></p>
+      <p><%= credit.teacher_name %> 先生</p>
+      <p>内容充実度：<%= credit.fulfillment %></p>
+      <p>単位取得度：<%= credit.ease %></p>
+      <p>出席：<%= credit.attendance %></p>
+      <p>テスト形式(中間)：<%= credit.mid_test_format %></p>
+      <p>テスト形式(期末)：<%= credit.final_test_format %></p>
+      <p>テスト時の持ち込み：<%= credit.item %></p>
+      <p>教科書：<%= credit.textbook %></p>
+      <p>講義の内容：<%= credit.comment %></p>
+      <% if current_user && current_user.admin? %>
+        <%= link_to "削除", credit_path(credit), method: :delete,
+                                         data: { confirm: "You sure?" }%>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
