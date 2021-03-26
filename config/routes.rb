@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'clubs/index'
+  get 'clubs/show'
   root   'static_pages#home'
   get    '/about',    to: 'static_pages#about'
   get    '/manager',  to: 'static_pages#manager'
