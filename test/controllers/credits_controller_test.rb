@@ -11,18 +11,8 @@ class CreditsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get show" do
-    get credit_path(@credit)
-    assert_response :success
-  end
-
   test "should get new" do
     get new_credit_path
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_credit_path(@credit)
     assert_response :success
   end
 

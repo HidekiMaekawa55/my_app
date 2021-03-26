@@ -1,0 +1,28 @@
+<h1><%= @club.name %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @club, local: true) do |f| %>
+      
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+
+      <%= f.label :date %>
+      <%= f.text_field :date %>
+      
+      <%= f.label :member %>
+      <%= f.text_field :member %>
+
+      <%= f.label :place %>
+      <%= f.text_field :place %>
+      
+      <%= f.label :league %>
+      <%= f.text_field :league %>
+
+      <%= f.submit "Create", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

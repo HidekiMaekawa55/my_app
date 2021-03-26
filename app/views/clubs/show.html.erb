@@ -1,2 +1,9 @@
-<h1>Clubs#show</h1>
-<p>Find me in app/views/clubs/show.html.erb</p>
+<h1><%= @club.name %></h1>
+<%= link_to "編集", edit_club_path(@club) %>
+
+<p><%= @club.content %></p>
+<p><%= @club.date %></p>
+<p><%= @club.member %></p>
+<p><%= @club.place %></p>
+<p><%= @club.league %></p>
+
