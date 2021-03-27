@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete '/logout',   to: 'sessions#destroy'
   get    '/clubs/taiikukai_kyugi', to: 'clubs#taiikukai_kyugi'
   get    '/clubs/taiikukai_budo',  to: 'clubs#taiikukai_budo'
+  get    '/likes/:club_id/create', to: 'likes#create'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
