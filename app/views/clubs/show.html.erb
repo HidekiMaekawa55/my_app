@@ -1,9 +1,35 @@
-<h1><%= @club.name %></h1>
-<%= link_to "編集", edit_club_path(@club) %>
+<div class="club_show">
+  <h1><%= @club.name %></h1>
+  <p><%= link_to "編集", edit_club_path(@club) %></p>
+  
+  <div class="club_img">
+    <%= image_tag "club/club#{@club.id}.jpg" %>
+  </div>
+  
+  <div class="club_content">
+    <%= @club.content %>
+  </div>
+  
+  <table border="1" class="club_table">
+    <tr>
+      <td>活動曜日・時間</td>
+      <td><%= @club.date %></td>
+    </tr>
+    <tr>
+      <td>部員数</td>
+      <td><%= @club.member %></td>
+    </tr>
+    <tr>
+      <td>活動場所</td>
+      <td><%= @club.place %></td>
+    </tr>
+    <% unless @club.league.blank? %>
+      <tr>
+        <td>所属リーグ</td>
+        <td><%= @club.league %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
 
-<p><%= @club.content %></p>
-<p><%= @club.date %></p>
-<p><%= @club.member %></p>
-<p><%= @club.place %></p>
-<p><%= @club.league %></p>
 

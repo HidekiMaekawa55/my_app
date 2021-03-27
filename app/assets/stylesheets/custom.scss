@@ -136,6 +136,7 @@ input {
 
 
 /* homepage */
+
 .homeTopics {
   margin-top: 50px;
 }
@@ -243,3 +244,32 @@ input {
   background: rgba(0, 0, 0, 0.1);
 }
 
+
+/* club */
+.club_show > h1,p {
+  text-align: center;
+}
+
+.club_img {
+  text-align: center;
+}
+
+.club_content {
+  width: 820px;
+  margin:0 auto;
+  padding: 30px 0;
+}
+
+.club_table {
+  width: 820px;
+  margin:0 auto;
+}
+
+.club_table td:nth-child(1) {
+  width: 30%;
+  background-color: cornsilk;
+}
+
+.club_table td {
+  padding: 20px;
+}
