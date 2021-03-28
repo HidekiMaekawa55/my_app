@@ -1,0 +1,6 @@
+<h1>体育会所属団体：その他</h1>
+
+<% @clubs = Club.list %>
+<% @clubs[37..40].each do |club| %>
+  <p><%= link_to club.name, club_path("#{club.id}") %></p>
+<% end %>

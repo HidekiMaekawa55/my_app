@@ -1,25 +1,6 @@
 <h1>体育会所属団体：球技</h1>
-<p><%= link_to "アイスホッケー部", club_path(1) %></p>
-<p><%= link_to "アメリカンフットボール部", club_path(2) %></p>
-<p><%= link_to "バトミントン部", club_path(3) %></p>
-<p><%= link_to "バレーボール部　男子", club_path(4) %></p>
-<p><%= link_to "バレーボール部　女子", club_path(5) %></p>
-<p><%= link_to "バスケットボール部　男子", club_path(6) %></p>
-<p><%= link_to "バスケットボール部　女子", club_path(7) %></p>
-<p><%= link_to "ゴルフ部　男子", club_path(8) %></p>
-<p><%= link_to "ゴルフ部　女子", club_path(9) %></p>
-<p><%= link_to "ハンドボール部　男子", club_path(10) %></p>
-<p><%= link_to "ハンドボール部　女子", club_path(11) %></p>
-<p><%= link_to "準公式野球部", club_path(12) %></p>
-<p><%= link_to "硬式庭球部　男子", club_path(13) %></p>
-<p><%= link_to "硬式庭球部　女子", club_path(14) %></p>
-<p><%= link_to "硬式野球部", club_path(15) %></p>
-<p><%= link_to "軟式庭球部　男子", club_path(16) %></p>
-<p><%= link_to "軟式庭球部　女子", club_path(17) %></p>
-<p><%= link_to "ラグビー部", club_path(18) %></p>
-<p><%= link_to "サッカー部", club_path(19) %></p>
-<p><%= link_to "ソフトボール部", club_path(20) %></p>
-<p><%= link_to "卓球部　男子", club_path(21) %></p>
-<p><%= link_to "卓球部　女子", club_path(22) %></p>
-<p><%= link_to "ラクロス部　男子", club_path(23) %></p>
-<p><%= link_to "ラクロス部　女子", club_path(24) %></p>
+
+<% @clubs = Club.list %>
+<% @clubs[0..23].each do |club| %>
+  <p><%= link_to club.name, club_path("#{club.id}") %></p>
+<% end %>

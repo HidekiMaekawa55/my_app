@@ -5,6 +5,7 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find(params[:id])
+    @likes = Like.where(club_id: @club.id).order("created_at DESC")
   end
   
   def new
@@ -37,13 +38,10 @@ class ClubsController < ApplicationController
     end
   end
   
-  def taiikukai_kyugi
-  end
-  
   private
   
     def club_params
       params.require(:club).permit(:name, :content, :date, :member,
-                                   :place, :league)
+                                   :place, :league, :email)
     end
 end

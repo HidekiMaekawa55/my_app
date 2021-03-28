@@ -273,3 +273,21 @@ input {
 .club_table td {
   padding: 20px;
 }
+
+.club_likes h1 {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.club_likes_user_box {
+  margin-bottom: 10px;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.1);
+  width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.club_likes_user_box p {
+  margin: 0;
+}

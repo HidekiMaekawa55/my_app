@@ -1,9 +1,6 @@
 <h1>体育会所属団体：武道・射的競技</h1>
-<p><%= link_to "柔道部", club_path(25) %></p>
-<p><%= link_to "空手道部", club_path(26) %></p>
-<p><%= link_to "剣道部", club_path(27) %></p>
-<p><%= link_to "弓道部　男子", club_path(28) %></p>
-<p><%= link_to "弓道部　女子", club_path(29) %></p>
-<p><%= link_to "少林寺拳法部", club_path(30) %></p>
-<p><%= link_to "洋弓部　男子", club_path(31) %></p>
-<p><%= link_to "洋弓部　女子", club_path(32) %></p>
+
+<% @clubs = Club.list %>
+<% @clubs[24..31].each do |club| %>
+  <p><%= link_to club.name, club_path("#{club.id}") %></p>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>文化系団体(公認・準公認)：ボランティア</h1>
+
+<% @clubs = Club.list %>
+<% @clubs[75..76].each do |club| %>
+  <p><%= link_to club.name, club_path("#{club.id}") %></p>
+<% end %>
