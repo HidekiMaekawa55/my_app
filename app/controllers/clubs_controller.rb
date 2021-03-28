@@ -31,7 +31,7 @@ class ClubsController < ApplicationController
     @club = Club.find(params[:id])
     if @club.update(club_params)
       flash[:success] = "success"
-      redirect_to clubs_taiikukai_kyugi_path
+      redirect_to clubs_path
     else
       flash[:danger] = "error"
       render 'edit'
