@@ -1,0 +1,27 @@
+<% provide(:title, 'ご意見・ご要望') %>
+<h1>ご意見・ご要望</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(url: contacts_path, scope: :contact, local: true) do |f| %>
+      
+      <%= f.label :title, "タイトル ※必須"%>
+      <%= f.text_field :title %>
+      
+      <%= f.label :content, "サイトの問題点やご意見、ご質問等の詳細をご入力ください。 ※必須" %>
+      <%= f.text_area :content %>
+      
+      <p>個別に回答を希望される方は下記の情報をご入力下さい。</p>
+      
+      <%= f.label :name, "名前" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email, "メールアドレス" %>
+      <%= f.email_field :email %>
+      
+      <p>提供された個人情報に関しては、情報管理サービスにより保護されます。</p>
+
+      <%= f.submit "Post", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

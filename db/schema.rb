@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_103207) do
+ActiveRecord::Schema.define(version: 2021_03_29_123139) do
 
   create_table "clubs", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2021_03_29_103207) do
     t.string "place"
     t.string "league"
     t.string "email"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "credits", force: :cascade do |t|

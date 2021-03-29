@@ -22,11 +22,13 @@ Rails.application.routes.draw do
   get    '/clubs/bunkakei_sonota',     to: 'clubs#bunkakei_sonota'
   get    '/clubs/iinkai',              to: 'clubs#iinkai'
   get    '/likes/:club_id/create',     to: 'likes#create'
+  get    '/contacts/thanks',           to: 'contacts#thanks'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :manuscripts
   resources :credits,             only: [:index, :new, :create, :destroy]
-  resources :clubs,               onlu: [:index, :show]
+  resources :clubs,               only: [:index, :show, :new, :create]
   resources :events
+  resources :contacts,            only: [:index, :show, :new, :create]
 end
