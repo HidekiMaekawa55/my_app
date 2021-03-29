@@ -13,11 +13,14 @@
   <% end %>
 </div>
 
-<div class="content event">
-  <h1>Event</h1>
-  <div class="contents">
-    event
-  </div>
+<div class="content evets">
+  <h1>University Events</h1>
+  <% @events.each do |event| %>
+    <div class="contents">
+      <h2><%= link_to event.title, event_path(event) %></h2>
+      <p><%= event.created_at.to_s(:datetime_jp) %></p>
+    </div>
+  <% end %>
 </div>
 
 <%= javascript_pack_tag 'static_pages/home.js' %>

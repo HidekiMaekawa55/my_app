@@ -1,14 +1,14 @@
-<div class="manuscript_index">
+<div class="manuscript_event_index">
   <h1>University News</h1>
   
   <% if current_user && current_user.admin? %>
-    <div class="news_post">
+    <div class="admin_post">
       <%= link_to "News投稿", new_manuscript_path %>
     </div>
   <% end %>
   
   <% @manuscripts.each do |manuscript| %>
-    <div class="news_box">
+    <div class="manuscript_event_box">
       <h1><%= link_to manuscript.title, manuscript_path(manuscript) %></h1>
       <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
       <% if current_user && current_user.admin? %>

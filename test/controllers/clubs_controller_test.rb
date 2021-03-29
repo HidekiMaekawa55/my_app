@@ -11,9 +11,4 @@ class ClubsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get show" do
-    get club_path(@club)
-    assert_response :success
-  end
-
 end

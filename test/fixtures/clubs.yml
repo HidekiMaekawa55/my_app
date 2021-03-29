@@ -1,5 +1,8 @@
 one:
   name: MyString
-
-two:
-  name: MyString
+  content: example
+  date: 毎週水曜日
+  member: ２０名
+  place: 南山大学
+  league: 東海二部
+  email: michael@example.com

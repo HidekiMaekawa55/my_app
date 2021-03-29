@@ -11,6 +11,11 @@ User.create!(name:  "Example User",
                        content: "example,example,example,example")
 end
 
+10.times do             
+    Event.create!(title: "Example",
+                       content: "example,example,example,example")
+end
+
 User.create!(name:  "Club officials",
              email: "taiikukai_ice_hockey@njs.com",
              password:              "187384",

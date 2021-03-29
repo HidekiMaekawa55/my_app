@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   resources :manuscripts
   resources :credits,             only: [:index, :new, :create, :destroy]
   resources :clubs,               onlu: [:index, :show]
+  resources :events
 end

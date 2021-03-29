@@ -1,0 +1,21 @@
+<div class="manuscript_event_index">
+  <h1>University Events</h1>
+  
+  <% if current_user && current_user.admin? %>
+    <div class="admin_post">
+      <%= link_to "Event投稿", new_event_path %>
+    </div>
+  <% end %>
+  
+  <% @events.each do |event| %>
+    <div class="manuscript_event_box">
+      <h1><%= link_to event.title, event_path(event) %></h1>
+      <p><%= event.created_at.to_s(:datetime_jp) %></p>
+      <% if current_user && current_user.admin? %>
+        <%= link_to "編集", edit_event_path(event) %>
+        <%= link_to "削除", event_path(event), method: :delete,
+                                         data: { confirm: "You sure?" }%>
+      <% end %>
+    </div>
+  <% end %>
+</div>
