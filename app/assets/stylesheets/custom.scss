@@ -291,3 +291,38 @@ input {
 .club_likes_user_box p {
   margin: 0;
 }
+
+.club_index {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.club_index h1 {
+  margin-bottom: 20px;
+}
+
+.club_index_items a {
+  display: inline-block;
+  width: 280px;
+  height: 80px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 80px;
+  transition-duration: 0.3s;
+  position: relative;
+}
+
+.club_index_items a:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.club_index_items a:hover {
+  background: rgba(89, 126, 240, 0.09);
+}

@@ -1,6 +1,10 @@
-<h1>文化系団体(公認・準公認)：教養・文化・その他</h1>
-
-<% @clubs = Club.list %>
-<% @clubs[82..92].each do |club| %>
-  <p><%= link_to club.name, club_path("#{club.id}") %></p>
-<% end %>
+<div class="club_index">
+  <h1>文化系団体(公認・準公認)：教養・文化・その他</h1>
+  
+  <% @clubs = Club.list %>
+  <div class="club_index_items">
+    <% @clubs[82..92].each do |club| %>
+      <%= link_to club.name, club_path("#{club.id}") %>
+    <% end %>
+  </div>
+</div>

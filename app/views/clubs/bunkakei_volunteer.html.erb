@@ -1,6 +1,12 @@
-<h1>文化系団体(公認・準公認)：ボランティア</h1>
+<div class="club_index">
+  <h1>文化系団体(公認・準公認)：ボランティア</h1>
+  
+  <% @clubs = Club.list %>
+  <div class="club_index_items">
+    <% @clubs[75..76].each do |club| %>
+      <%= link_to club.name, club_path("#{club.id}") %>
+    <% end %>
+  </div>
+</div>
 
-<% @clubs = Club.list %>
-<% @clubs[75..76].each do |club| %>
-  <p><%= link_to club.name, club_path("#{club.id}") %></p>
-<% end %>
+<h1>文化系団体(公認・準公認)：ボランティア</h1>
