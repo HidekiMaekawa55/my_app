@@ -1,4 +1,6 @@
-<div class="manuscript_event_index">
+<%= provide(:title, 'News List') %>
+
+<div class="manuscript_event_contact_index">
   <h1>University News</h1>
   
   <% if current_user && current_user.admin? %>
@@ -8,7 +10,7 @@
   <% end %>
   
   <% @manuscripts.each do |manuscript| %>
-    <div class="manuscript_event_box">
+    <div class="manuscript_event_contact_box">
       <h1><%= link_to manuscript.title, manuscript_path(manuscript) %></h1>
       <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
       <% if current_user && current_user.admin? %>

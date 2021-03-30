@@ -1,13 +1,15 @@
 class ContactsController < ApplicationController
+  before_action :admin_user, only: [:index]
   
   def index
+    @contacts = Contact.all.order("created_at DESC")
   end
   
   def show
+    @contact = Contact.find(params[:id])
   end
   
   def new
-    @contact = Contact.new
   end
   
   def create
