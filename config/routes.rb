@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get    '/clubs/iinkai',              to: 'clubs#iinkai'
   get    '/likes/:club_id/create',     to: 'likes#create'
   get    '/contacts/thanks',           to: 'contacts#thanks'
+  get    '/credits/search',            to: 'credits#search'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]

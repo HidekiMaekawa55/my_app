@@ -31,6 +31,21 @@ class CreditsController < ApplicationController
     end
   end
   
+  def search
+    @word = params[:word]
+    @words = @word.gsub(/　/," ").lstrip.split(/[[:blank:]]+/)
+    if @words.length >= 3
+      flash[:danger] = "３単語以上で検索をすることはできません。"
+      redirect_to credits_path
+    else
+      @searches = Credit.where('teacher_name Like ? and class_name Like ?', "%#{@words[0]}%", "%#{@words[1]}%")
+      if !@searches.blank?
+        @searches
+      else @searches = Credit.where('teacher_name Like ? and class_name Like ?', "%#{@words[1]}%", "%#{@words[0]}%")
+        @searches
+      end
+    end
+  end
   
   private
   

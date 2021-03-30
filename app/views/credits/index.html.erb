@@ -1,3 +1,9 @@
+<h3>授業・教師　検索</h3>
+<%= form_with url: credits_search_path, method: :get, local: true do |f| %>
+  <%= f.text_field :word %>
+  <%= f.submit :search %>
+<% end %>
+
 <div class="credit_index">
   <h1>Easy Credit Infromation</h1>
   <%= link_to "投稿", new_credit_path %> 

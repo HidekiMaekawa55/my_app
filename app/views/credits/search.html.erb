@@ -1,0 +1,9 @@
+<h1>検索結果</h1>
+<% @searches.each do |credit| %>
+  <ul>
+    <li>
+    <%= link_to "#{credit.department}　#{credit.class_name}　(#{credit.teacher_name}先生)", credits_path %>
+    </li>
+  </ul>
+<% end %>
+
