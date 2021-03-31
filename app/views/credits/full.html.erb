@@ -10,9 +10,9 @@
   
   <div class="credit_index_order">
     <p>並び替え</p>
-    <%= link_to "新しい順", credits_path, id: "select_order" %>
+    <%= link_to "新しい順", credits_path %>
     <%= link_to "単位取得度順", credits_easy_path %>
-    <%= link_to "内容充実度が高い順", credits_full_path %>
+    <%= link_to "内容充実度が高い順", credits_full_path, id: "select_order" %>
   </div>
   
   <% @credits.each do |credit| %>
@@ -36,4 +36,3 @@
     </div>
   <% end %>
 </div>
-

@@ -47,6 +47,14 @@ class CreditsController < ApplicationController
     end
   end
   
+  def easy
+    @credits = Credit.all.order("ease DESC")
+  end
+  
+  def full
+    @credits = Credit.all.order("fulfillment DESC")
+  end
+  
   private
   
     def credit_params

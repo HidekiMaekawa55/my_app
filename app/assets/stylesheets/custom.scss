@@ -326,3 +326,9 @@ input {
 .club_index_items a:hover {
   background: rgba(89, 126, 240, 0.09);
 }
+
+
+#select_order {
+  pointer-events: none;
+  color: black;
+}

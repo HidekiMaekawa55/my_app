@@ -24,12 +24,14 @@ Rails.application.routes.draw do
   get    '/likes/:club_id/create',     to: 'likes#create'
   get    '/contacts/thanks',           to: 'contacts#thanks'
   get    '/credits/search',            to: 'credits#search'
+  get    '/credits/easy',              to: 'credits#easy'
+  get    '/credits/full',              to: 'credits#full'
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :manuscripts
   resources :credits,             only: [:index, :new, :create, :destroy]
-  resources :clubs,               only: [:index, :show, :new, :create]
+  resources :clubs,               only: [:index, :show, :new, :create, :edit]
   resources :events
   resources :contacts,            only: [:index, :show, :new, :create]
 end
