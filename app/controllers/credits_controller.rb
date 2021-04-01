@@ -2,7 +2,7 @@ class CreditsController < ApplicationController
   before_action :admin_user, only: [:destroy]
   
   def index
-    @credits = Credit.all.order("created_at DESC")
+    @credits = Credit.paginate(page: params[:page]).order("created_at DESC")
   end
 
   def new

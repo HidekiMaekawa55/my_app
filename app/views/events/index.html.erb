@@ -9,6 +9,8 @@
     </div>
   <% end %>
   
+  <%= will_paginate %>
+  
   <% @events.each do |event| %>
     <div class="manuscript_event_contact_box">
       <h1><%= link_to event.title, event_path(event) %></h1>
@@ -20,4 +22,6 @@
       <% end %>
     </div>
   <% end %>
+  
+  <%= will_paginate %>
 </div>

@@ -9,6 +9,8 @@
     </div>
   <% end %>
   
+  <%= will_paginate %>
+  
   <% @manuscripts.each do |manuscript| %>
     <div class="manuscript_event_contact_box">
       <h1><%= link_to manuscript.title, manuscript_path(manuscript) %></h1>
@@ -20,4 +22,6 @@
       <% end %>
     </div>
   <% end %>
+  
+  <%= will_paginate %>
 </div>

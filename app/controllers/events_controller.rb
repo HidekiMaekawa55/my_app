@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :admin_user, only: [:new, :create, :edit, :destroy]
   
   def index
-    @events = Event.all.order("created_at DESC")
+    @events = Event.paginate(page: params[:page]).order("created_at DESC")
   end
   
   def show
