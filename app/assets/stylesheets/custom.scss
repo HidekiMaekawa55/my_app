@@ -244,6 +244,11 @@ input {
   background: rgba(0, 0, 0, 0.1);
 }
 
+#select_order {
+  pointer-events: none;
+  color: black;
+}
+
 
 /* club */
 .club_show > h1,p {
@@ -328,7 +333,122 @@ input {
 }
 
 
-#select_order {
-  pointer-events: none;
-  color: black;
+/* manager */
+.manager {
+  background: rgba(237, 222, 178, 0.3);
+  text-align: center;
+  height: 2800px;
+  margin: -30px -150px -300px;
 }
+
+.manager > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.manager > h1 {
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.manager > h2 {
+  font-weight: bold;
+}
+
+.manager .pic {
+  width: 35%;
+}
+
+.manager .pic img {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+}
+
+.manager .content {
+  width: 45%;
+  text-align: left;
+  align-self: center;
+  margin: 0;
+}
+
+.manager .content p {
+  text-align: left;
+}
+
+.manager .content p:first-child {
+  margin-top: 10px;
+}
+
+.manager .content p:last-child {
+  margin-bottom: 0;
+}
+
+.introduction {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.introduction h2 {
+  padding-bottom: 15px;
+  margin-top: 100px;
+}
+
+.introduction p {
+  line-height: 2em;
+}
+
+.introduction .languages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.languages > .item{
+  // background: white;
+  background: rgba(46, 55, 71, 1.0);
+  border: 1px solid black;
+  width: 48%;
+  height: 230px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.languages > .item:first-child {
+  width: 100%;
+}
+
+.languages > .item h1 {
+  font-size: 23px;
+}
+
+.languages > .item table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.languages > .item table th {
+  text-align: center;
+  padding-top: 25px;
+}
+
+.languages > .item table td {
+  padding: 10px 0;
+}
+
+.languages > .item table td:first-child {
+  font-weight: bold;
+}
+
+.future {
+  padding-bottom: 25px;
+}
+
+
+
+
+
+
