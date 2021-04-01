@@ -46,5 +46,5 @@
     }, 5000);
   }
   
-  // setTimeout(playSlideshow, 5000);
+  setTimeout(playSlideshow, 5000);
 }
