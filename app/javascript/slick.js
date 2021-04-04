@@ -9,7 +9,7 @@
       dots: true,
       arrows: false,
       centerMode: true,
-      centerPadding: '20%'
+      centerPadding: '20%',
     });
   }); 
 }

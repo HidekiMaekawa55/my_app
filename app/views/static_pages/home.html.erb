@@ -9,24 +9,40 @@
   </div>
 </div>
 
-
 <div class="home_content news">
   <h1>University News</h1>
-  <% @manuscripts.each do |manuscript| %>
-    <div class="contents">
-      <h2><%= link_to manuscript.title, manuscript_path(manuscript) %></h2>
-      <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
-    </div>
-  <% end %>
+  <div class="home-container">
+    <% @manuscripts.each do |manuscript| %>
+      <%= link_to manuscript_path(manuscript) do %>
+        <div class="frame">
+          <picture>
+            <%= image_tag "static_pages/blue1.jpg" %>
+          </picture>
+          <div class="contents">
+            <h2><%= manuscript.title %></h2>
+            <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
 
-<div class="home_content evets">
+<div class="home_content events">
   <h1>University Events</h1>
-  <% @events.each do |event| %>
-    <div class="contents">
-      <h2><%= link_to event.title, event_path(event) %></h2>
-      <p><%= event.created_at.to_s(:datetime_jp) %></p>
-    </div>
-  <% end %>
+  <div class="home-container">
+    <% @events.each do |event| %>
+      <%= link_to event_path(event) do %>
+        <div class="frame">
+          <picture>
+            <%= image_tag "static_pages/orange.jpg" %>
+          </picture>
+          <div class="contents">
+            <h2><%= event.title %></h2>
+            <p><%= event.created_at.to_s(:datetime_jp) %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
-
