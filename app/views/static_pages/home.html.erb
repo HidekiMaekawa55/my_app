@@ -1,10 +1,16 @@
-<div class="homeTopics">
-  <img id="main">
-  <ul class="thumbnails"></ul>
+<div class="content">
+  <div class="slider mypattern">
+    <%= link_to image_tag('static_pages/group1.jpg'), club_path(23) %>
+    <%= link_to image_tag('static_pages/group2.jpg'), club_path(47) %>
+    <%= link_to image_tag('static_pages/group3.jpg'), club_path(54) %>
+    <%= link_to image_tag('static_pages/group4.jpg'), club_path(75) %>
+    <%= link_to image_tag('static_pages/group5.jpg'), club_path(12) %>
+    <%= link_to image_tag('static_pages/group6.jpg'), club_path(78) %>
+  </div>
 </div>
 
 
-<div class="content news">
+<div class="home_content news">
   <h1>University News</h1>
   <% @manuscripts.each do |manuscript| %>
     <div class="contents">
@@ -14,7 +20,7 @@
   <% end %>
 </div>
 
-<div class="content evets">
+<div class="home_content evets">
   <h1>University Events</h1>
   <% @events.each do |event| %>
     <div class="contents">
@@ -24,4 +30,3 @@
   <% end %>
 </div>
 
-<%= javascript_pack_tag 'static_pages/home.js' %>
