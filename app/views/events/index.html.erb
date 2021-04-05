@@ -1,6 +1,6 @@
 <%= provide(:title, 'Event List') %>
 
-  <div class="home_content event manuscript_event_index">
+  <div class="box-design common">
     <h1>University Event</h1>
     <% if current_user && current_user.admin? %>
       <div class="admin_post">
@@ -10,14 +10,14 @@
     
     <%= will_paginate %>
      
-    <div class="home-container">
+    <div class="box-container">
       <% @events.each do |event| %>
         <%= link_to event_path(event) do %>
           <div class="frame">
             <picture>
               <%= image_tag "static_pages/orange.jpg" %>
             </picture>
-            <div class="contents">
+            <div class="letters">
               <h2><%= event.title %></h2>
               <p><%= event.created_at.to_s(:datetime_jp) %></p>
               <% if current_user && current_user.admin? %>

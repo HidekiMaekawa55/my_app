@@ -9,16 +9,16 @@
   </div>
 </div>
 
-<div class="home_content news">
+<div class="box-design">
   <h1>University News</h1>
-  <div class="home-container">
+  <div class="box-container">
     <% @manuscripts.each do |manuscript| %>
       <%= link_to manuscript_path(manuscript) do %>
         <div class="frame">
           <picture>
             <%= image_tag "static_pages/blue1.jpg" %>
           </picture>
-          <div class="contents">
+          <div class="letters">
             <h2><%= manuscript.title %></h2>
             <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
           </div>
@@ -28,16 +28,16 @@
   </div>
 </div>
 
-<div class="home_content events">
+<div class="box-design event-box">
   <h1>University Events</h1>
-  <div class="home-container">
+  <div class="box-container">
     <% @events.each do |event| %>
       <%= link_to event_path(event) do %>
         <div class="frame">
           <picture>
             <%= image_tag "static_pages/orange.jpg" %>
           </picture>
-          <div class="contents">
+          <div class="letters">
             <h2><%= event.title %></h2>
             <p><%= event.created_at.to_s(:datetime_jp) %></p>
           </div>
