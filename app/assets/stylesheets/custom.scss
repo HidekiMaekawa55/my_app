@@ -75,6 +75,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
+  clear: both;
 }
 
 footer a {
@@ -157,8 +158,6 @@ input {
 
 
 
-
-
 /* error_messages */
 
 #error_explanation {
@@ -226,10 +225,14 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  clear: both;
 }
 
-.home-container a:hover {
+.home-container a {
   text-decoration: none;
+}
+
+.home-container > a:hover {
   .frame {
     box-shadow: 6px 6px 20px;
   }
@@ -244,7 +247,7 @@ input {
   height: 395px;
   margin-bottom: 30px;
   box-shadow: 4px 4px 5px;
-  transition: 0.4s;
+  transition: 0.7s;
 }
 
 picture img {
@@ -256,7 +259,7 @@ picture img {
   margin: 0 auto;
   width: 370px;
   height: 145px;
-  transition: 0.4s;
+  transition: 0.7s;
   text-decoration: none;
   color: black;
 }
@@ -273,30 +276,24 @@ picture img {
 }
 
 
-/* manuscript */
+/* manuscript event */
 
-.manuscript_event_contact_index {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 800px;
+.manuscript_event_index {
+  margin-top: 80px;
 }
 
-.admin_post {
-  display: inline-block;
-  width: 80px;
-  height: 20px;
+.manuscript_event_index > h1 {
+  margin-bottom: 13px;
+}
+
+.pagination {
+  margin-top: 0;
   margin-bottom: 15px;
+  float: right;
+  width: 239px;
+  height: 40px;
 }
 
-.manuscript_event_contact_box {
-  margin-bottom: 10px;
-  border: 1px solid black;
-}
-
-.manuscript_event_contact_box h1 {
-  font-size: 20px;
-}
 
 
 /* credit */
@@ -368,27 +365,41 @@ picture img {
 
 .club_index {
   width: 80%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
-.club_index h1 {
+.club_index > h1 {
   margin-bottom: 20px;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px black;
 }
 
-.club_index_items a {
+.club_index > .items {
+  margin-bottom: 45px;
+}
+
+.club_index > .items a {
   display: inline-block;
   width: 280px;
   height: 80px;
   margin-right: 20px;
   margin-bottom: 20px;
-  border: 1px solid black;
+  box-shadow: 2px 2px 5px black;
   text-align: center;
   line-height: 80px;
-  transition-duration: 0.3s;
+  transition: 0.3s;
   position: relative;
+  text-decoration: none;
+  color: white;
+  background: rgba(46, 48, 146, 1);
 }
 
-.club_index_items a:after {
+.club_index > .items a:hover {
+  background: rgba(46, 48, 146, 0.8);
+  box-shadow: 1px 1px 2px black;
+}
+
+.club_index > .items a:after {
   font-family: "Font Awesome 5 Free";
   content: "\f054";
   font-weight: 900;
@@ -397,17 +408,14 @@ picture img {
   right: 15px;
 }
 
-.club_index_items a:hover {
-  background: rgba(89, 126, 240, 0.09);
-}
-
 
 /* manager */
 .manager {
   background: rgba(237, 222, 178, 0.3);
   text-align: center;
   height: 2800px;
-  margin: -30px -150px -300px;
+  margin: 0 -150px -300px;
+  padding-top: 37px;
 }
 
 .manager > .container {
@@ -516,5 +524,6 @@ picture img {
   padding-bottom: 25px;
 }
   
+
   
 

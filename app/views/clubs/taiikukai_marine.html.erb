@@ -1,10 +1,4 @@
-<div class="club_index">
-  <h1>体育会所属団体：マリンスポーツ・スカイスポーツ</h1>
-  
-  <% @clubs = Club.list %>
-  <div class="club_index_items">
-    <% @clubs[35..36].each do |club| %>
-      <%= link_to club.name, club_path("#{club.id}") %>
-    <% end %>
-  </div>
-</div>
+<%= provide(:title, "体育会所属団体：マリンスポーツ・スカイスポーツ") %>
+
+<%= render 'club', { heading: "体育会所属団体：マリンスポーツ・スカイスポーツ", 
+                                               value: 35..36 } %>

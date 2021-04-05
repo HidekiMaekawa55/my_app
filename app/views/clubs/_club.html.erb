@@ -1,0 +1,21 @@
+<div class="home_content news manuscript_event_index">
+  <h1><%= heading %></h1>
+   
+    <div class="home-container">
+      <% unless value.blank? %>
+        <% @clubs = Club.list %>
+        <% @clubs[value].each do |club| %>
+          <%= link_to club_path("#{club.id}") do %>
+            <div class="frame">
+              <picture>
+                <%= image_tag "club/club#{club.id}.jpg" %>
+              </picture>
+              <div class="contents">
+                <h2><%= club.name %></h2>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+</div>

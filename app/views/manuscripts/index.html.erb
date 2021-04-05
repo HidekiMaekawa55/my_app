@@ -1,8 +1,7 @@
 <%= provide(:title, 'News List') %>
 
-<div class="manuscript_event_contact_index">
+<div class="home_content news manuscript_event_index">
   <h1>University News</h1>
-  
   <% if current_user && current_user.admin? %>
     <div class="admin_post">
       <%= link_to "News投稿", new_manuscript_path %>
@@ -10,18 +9,28 @@
   <% end %>
   
   <%= will_paginate %>
-  
-  <% @manuscripts.each do |manuscript| %>
-    <div class="manuscript_event_contact_box">
-      <h1><%= link_to manuscript.title, manuscript_path(manuscript) %></h1>
-      <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
-      <% if current_user && current_user.admin? %>
-        <%= link_to "編集", edit_manuscript_path(manuscript) %>
-        <%= link_to "削除", manuscript_path(manuscript), method: :delete,
-                                         data: { confirm: "You sure?" }%>
+   
+  <div class="home-container">
+    <% @manuscripts.each do |manuscript| %>
+      <%= link_to manuscript_path(manuscript) do %>
+        <div class="frame">
+          <picture>
+            <%= image_tag "static_pages/blue1.jpg" %>
+          </picture>
+          <div class="contents">
+            <h2><%= manuscript.title %></h2>
+            <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
+            <% if current_user && current_user.admin? %>
+              <%= link_to "編集", edit_manuscript_path(manuscript) %>
+              <%= link_to "削除", manuscript_path(manuscript), method: :delete,
+                                               data: { confirm: "You sure?" }%>
+            <% end %>
+          </div>
+        </div>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
   
   <%= will_paginate %>
+  
 </div>

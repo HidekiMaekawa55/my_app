@@ -1,12 +1,4 @@
-<div class="club_index">
-  <h1>文化系団体(公認・準公認)：ボランティア</h1>
-  
-  <% @clubs = Club.list %>
-  <div class="club_index_items">
-    <% @clubs[75..76].each do |club| %>
-      <%= link_to club.name, club_path("#{club.id}") %>
-    <% end %>
-  </div>
-</div>
+<%= provide(:title, "文化系団体(公認・準公認)：ボランティア") %>
 
-<h1>文化系団体(公認・準公認)：ボランティア</h1>
+<%= render 'club', { heading: "文化系団体(公認・準公認)：ボランティア", 
+                                               value: 75..76 } %>

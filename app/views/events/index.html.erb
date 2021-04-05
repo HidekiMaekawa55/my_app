@@ -1,27 +1,36 @@
 <%= provide(:title, 'Event List') %>
 
-<div class="manuscript_event_contact_index">
-  <h1>University Events</h1>
-  
-  <% if current_user && current_user.admin? %>
-    <div class="admin_post">
-      <%= link_to "Event投稿", new_event_path %>
-    </div>
-  <% end %>
-  
-  <%= will_paginate %>
-  
-  <% @events.each do |event| %>
-    <div class="manuscript_event_contact_box">
-      <h1><%= link_to event.title, event_path(event) %></h1>
-      <p><%= event.created_at.to_s(:datetime_jp) %></p>
-      <% if current_user && current_user.admin? %>
-        <%= link_to "編集", edit_event_path(event) %>
-        <%= link_to "削除", event_path(event), method: :delete,
-                                         data: { confirm: "You sure?" }%>
+  <div class="home_content event manuscript_event_index">
+    <h1>University Event</h1>
+    <% if current_user && current_user.admin? %>
+      <div class="admin_post">
+        <%= link_to "Event投稿", new_event_path %>
+      </div>
+    <% end %>
+    
+    <%= will_paginate %>
+     
+    <div class="home-container">
+      <% @events.each do |event| %>
+        <%= link_to event_path(event) do %>
+          <div class="frame">
+            <picture>
+              <%= image_tag "static_pages/orange.jpg" %>
+            </picture>
+            <div class="contents">
+              <h2><%= event.title %></h2>
+              <p><%= event.created_at.to_s(:datetime_jp) %></p>
+              <% if current_user && current_user.admin? %>
+                <%= link_to "編集", edit_event_path(event) %>
+                <%= link_to "削除", event_path(event), method: :delete,
+                                                 data: { confirm: "You sure?" }%>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
-  <% end %>
-  
-  <%= will_paginate %>
-</div>
+    
+    <%= will_paginate %>
+    
+  </div>
