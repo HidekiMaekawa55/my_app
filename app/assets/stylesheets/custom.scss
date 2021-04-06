@@ -3,6 +3,20 @@
 @import "slick-theme";
 @import "slick";
 
+
+/* 全体 */
+
+body > .container {
+  margin-top: 122px;
+}
+
+.alert {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+
+
 /* header */
 
 #logo {
@@ -16,14 +30,11 @@
   line-height: 122px;
   font-size: 55px;
   letter-spacing: -1.6px;
-}
-
-#logo:hover {
   text-decoration: none;
 }
 
+
 header {
-  // background-color: #2e3092;
   background: white;
   height: 122px !important;
   border: 1px solid rgba(191, 191, 191, 1) !important;
@@ -44,27 +55,12 @@ header {
 
 
 .nav > li > a {
-  // color: white;
   color: black;
   line-height: 121px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   font-size: 18px;
   transition-duration: 0.3s;
-}
-
-.nav > li > a:hover {
-  color: black;
-}
-
-
-/* body */
-body {
-  padding-top: 60px;
-}
-
-body > .container {
-  margin-top: 30px;
 }
 
 
@@ -178,6 +174,10 @@ input {
 
 /* homepage */
 
+.content {
+  margin-top: 20px !important;
+}
+
 .slider {
   width: 90%;
   margin: 0 auto 80px;
@@ -284,7 +284,7 @@ picture img {
 /* manuscript event */
 
 .common {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .common > h1 {
@@ -322,40 +322,66 @@ picture img {
 
 
 /* club */
-.club_show > h1,p {
-  text-align: center;
-}
 
-.club_img {
-  text-align: center;
-}
-
-.club_content {
+.club-show {
+  margin-top: 50px;
   width: 820px;
-  margin:0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.club-show > a {
+  display: inline-block;
+  background: rgba(42, 137, 155, 1);
+  width: 820px;
+  height: 50px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  line-height: 50px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px black;
+  transition: 0.3s;
+}
+
+.club-show > a:hover {
+  box-shadow: 2px 2px 5px black;
+  background: orange;
+}
+
+.club-show > h1,p {
+  text-align: center;
+}
+
+.club-pic {
+  margin-top: 20px;
+}
+
+.club-content {
+  width: 820px;
   padding: 30px 0;
 }
 
-.club_table {
+.club-table {
   width: 820px;
-  margin:0 auto;
 }
 
-.club_table td:nth-child(1) {
+.club-table td:nth-child(1) {
   width: 30%;
   background-color: cornsilk;
 }
 
-.club_table td {
+.club-table td {
   padding: 20px;
 }
 
-.club_likes h1 {
+.club-likes h1 {
   text-align: center;
   margin-top: 70px;
 }
 
-.club_likes_user_box {
+.club-likes-user-box {
   margin-bottom: 10px;
   border: 1px solid black;
   background: rgba(0, 0, 0, 0.1);
@@ -364,7 +390,7 @@ picture img {
   margin-right: auto;
 }
 
-.club_likes_user_box p {
+.club-likes-user-box p {
   margin: 0;
 }
 
@@ -413,6 +439,20 @@ picture img {
   right: 15px;
 }
 
+.club-box {
+  margin-top: 50px;
+}
+
+.club-box h1 {
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+.club-letters h2 {
+  padding: 0;
+  line-height: 145px;
+}
+
 
 /* manager */
 .manager {
@@ -420,7 +460,7 @@ picture img {
   text-align: center;
   height: 2800px;
   margin: 0 -150px -300px;
-  padding-top: 37px;
+  padding-top: 50px;
 }
 
 .manager > .container {
@@ -430,8 +470,8 @@ picture img {
 }
 
 .manager > h1 {
-  padding-top: 30px;
   margin-bottom: 40px;
+  margin-top: 0;
 }
 
 .manager > h2 {
