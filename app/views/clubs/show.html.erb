@@ -45,10 +45,12 @@
         <% @likes.each do |like| %>
           <div class="club-likes-user-box">
             <p><%= like.user.name %></p>
-            <p><%= like.user.email %></p>
+            <p class="mail"><%= like.user.email %></p>
             <p><%= like.created_at.to_s(:datetime_jp) %></p>
           </div>
         <% end %>
+        
+        <%= will_paginate @likes %>
       <% end %>
     <% end %>
   </div>

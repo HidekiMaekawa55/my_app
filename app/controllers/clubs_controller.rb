@@ -5,7 +5,7 @@ class ClubsController < ApplicationController
 
   def show
     @club = Club.find(params[:id])
-    @likes = Like.where(club_id: @club.id).order("created_at DESC")
+    @likes = Like.paginate(page: params[:page]).where(club_id: @club.id).order("created_at DESC")
   end
   
   def new
