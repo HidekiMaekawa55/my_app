@@ -336,19 +336,35 @@ picture img {
 
 .credit-index > h1 {
   margin-top: 10px;
+  margin-bottom: 28px;
 }
 
 .credit-index > a {
   float: right;
+  box-shadow: 2px 2px 8px black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  background: skyblue;
+  color: white;
+  background: rgba(33, 163, 0, 1);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.credit-index > a:hover {
+  background: rgba(81, 237, 18, 1);
+  box-shadow: 1px 1px 1px black;
 }
 
 .credit-index > .order {
   display: flex;
+  padding-top: 25px;
 }
 
 .credit-index > .order a {
   margin-right: 10px;
-  margin-bottom: 10px;
   text-decoration: none;
 }
 
@@ -358,7 +374,7 @@ picture img {
 }
 
 .credit-box {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 1px solid black;
   border-radius: 3px;
   text-align: left;
@@ -396,16 +412,46 @@ picture img {
   padding-left: 10px;
 }
 
+.star5_rating {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  white-space: nowrap;
+  color: #cccccc;
+}
+
+.star5_rating:before, .star5_rating:after {
+  content: '★★★★★';
+}
+
+.star5_rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ffcf32;
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; }
+.star5_rating[data-rate="4"]:after{ width: 80%; }
+.star5_rating[data-rate="3"]:after{ width: 60%; } 
+.star5_rating[data-rate="2"]:after{ width: 40%; } 
+.star5_rating[data-rate="1"]:after{ width: 20%; }
+
+
 .credit-box > p {
   border: 1px solid black;
   margin-left: 3px;
   margin-right: 3px;
-  text-decoration: underline dotted orange;
+  text-decoration: underline dotted black;
   text-align: left;
   padding-left: 5px;
   padding-right: 5px;
   line-height: 30px;
   background: white;
+  border-radius: 3px;
 }
 
 .credit-container {
@@ -420,6 +466,7 @@ picture img {
   border: 1px solid black;
   margin-top: 5px;
   background: white;
+  border-radius: 3px;
 }
 
 .common > dt {
@@ -506,6 +553,7 @@ picture img {
 
 .club-table td {
   padding: 20px;
+  white-space: pre-line; 
 }
 
 .club-likes h1 {

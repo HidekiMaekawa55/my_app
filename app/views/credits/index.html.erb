@@ -13,8 +13,8 @@
 </div>
 
 <div class="credit-index">
-  <h1>Easy Credit Infromation</h1>
-  <%= link_to "投稿", new_credit_path %> 
+  <h1>Easy Credits</h1>
+  <%= link_to "授業評価を書く", new_credit_path %> 
   
   <div class="order">
     <%= link_to "新しい順", credits_path, id: "select_order" %>
@@ -33,8 +33,33 @@
       </ul>
       
       <ul class="rank">
-        <li>内容充実度：<%= credit.fulfillment %></li>
-        <li>単位取得度：<%= credit.ease %></li>
+        <li>内容充実度：
+          <% if credit.fulfillment == "5" %>
+            <span class="star5_rating" data-rate="5"></span>
+          <% elsif credit.fulfillment == "4" %>
+            <span class="star5_rating" data-rate="4"></span>
+          <% elsif credit.fulfillment == "3" %>
+            <span class="star5_rating" data-rate="3"></span>
+          <% elsif credit.fulfillment == "2" %>
+            <span class="star5_rating" data-rate="2"></span>
+          <% else %>
+            <span class="star5_rating" data-rate="1"></span>
+          <% end %>
+        </li>
+        
+        <li>単位取得度：
+          <% if credit.ease == "5" %>
+            <span class="star5_rating" data-rate="5"></span>
+          <% elsif credit.fulfillment == "4" %>
+            <span class="star5_rating" data-rate="4"></span>
+          <% elsif credit.fulfillment == "3" %>
+            <span class="star5_rating" data-rate="3"></span>
+          <% elsif credit.fulfillment == "2" %>
+            <span class="star5_rating" data-rate="2"></span>
+          <% else %>
+            <span class="star5_rating" data-rate="1"></span>
+          <% end %>
+        </li>
       </ul>
       
       <dl class="credit-container">

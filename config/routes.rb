@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :manuscripts
   resources :credits,             only: [:index, :new, :create, :destroy]
-  resources :clubs,               only: [:index, :show, :new, :create, :edit]
+  resources :clubs,               only: [:index, :show, :new, :create, :edit, :update]
   resources :events
   resources :contacts,            only: [:index, :show, :new, :create]
 end
