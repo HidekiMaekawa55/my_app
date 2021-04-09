@@ -1,4 +1,14 @@
-<h1><%= @contact.title %></h1>
-<p><%= @contact.content %></p>
-<p><%= @contact.name %></p>
-<p><%= @contact.email %></p>
+<div class="manuscript-event-contact-show">
+  <h1><%= @contact.title %></h1>
+  <p><%= @contact.content %></p>
+  
+  <% unless @contact.name.blank? %>
+    <div class="personal-information">
+      <h3>※連絡希望</h3>
+      <ul>
+        <li><%= @contact.name %></li>  
+        <li><%= @contact.email %></li>
+      </ul>
+    </div>
+  <% end %>
+</div>

@@ -2,7 +2,11 @@ class CreditsController < ApplicationController
   before_action :admin_user, only: [:destroy]
   
   def index
-    @credits = Credit.paginate(page: params[:page]).order("created_at DESC")
+    if params[:class_name]
+      @credits = Credit.paginate(page: params[:page]).where('teacher_name Like ? and class_name Like ?', params[:teacher_name], params[:class_name] ).order("created_at DESC")
+    else
+      @credits = Credit.paginate(page: params[:page]).order("created_at DESC")
+    end
   end
 
   def new
@@ -48,11 +52,11 @@ class CreditsController < ApplicationController
   end
   
   def easy
-    @credits = Credit.all.order("ease DESC")
+    @credits = Credit.paginate(page: params[:page]).order("ease DESC")
   end
   
   def full
-    @credits = Credit.all.order("fulfillment DESC")
+    @credits = Credit.paginate(page: params[:page]).order("fulfillment DESC")
   end
   
   private

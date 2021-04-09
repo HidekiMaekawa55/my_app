@@ -1,18 +1,18 @@
 <%= provide(:title, 'Contact List') %>
 
-<div class="manuscript_event_contact_index">
+<div class="contact-admin">
   <h1>お客様のご意見</h1>
   
   <% @contacts.each do |contact| %>
-    <div class="manuscript_event_contact_box">
-      <h1>
+    <div class="admin-box">
+      <p>
         <%= link_to contact.title, contact_path(contact) %>
         <span>
           <% unless contact.email.blank? %>
             *
           <% end %>
         </span>
-      </h1>
+      </p>
       <p><%= contact.created_at.to_s(:datetime_jp) %></p>
     </div>
   <% end %>

@@ -141,6 +141,12 @@ input {
   margin-left: 0;
 }
 
+.form-title h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 32px;
+}
+
 
 .radio [type="radio"] {
   display: inline-block;
@@ -267,12 +273,20 @@ picture img {
   transition: 0.7s;
   text-decoration: none;
   color: black;
+  position: relative;
 }
 
 .letters h2 {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.5em;
   margin-top: 0;
-  padding-top: 43px;
+  padding-top: 40px;
+}
+
+.letters p {
+  position: absolute;
+  top: 122px;
+  right: 5px;
 }
 
 
@@ -282,6 +296,23 @@ picture img {
 
 
 /* manuscript event */
+.manuscript-event-contact-show {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.manuscript-event-contact-show h1 {
+  text-align: left;
+  font-size: 30px;
+}
+
+.manuscript-event-contact-show > p {
+  margin-top: 30px;
+  white-space: pre-line;
+  text-align: left;
+  padding-left: 20px;
+}
 
 .common {
   margin-top: 50px;
@@ -653,7 +684,7 @@ picture img {
   background: rgba(237, 222, 178, 0.3);
   text-align: center;
   height: 2800px;
-  margin: 0 -150px -300px;
+  margin: 0 -150px -180px;
   padding-top: 50px;
 }
 
@@ -724,7 +755,6 @@ picture img {
 }
 
 .languages > .item{
-  // background: white;
   background: rgba(46, 55, 71, 1.0);
   border: 1px solid black;
   width: 48%;
@@ -762,7 +792,88 @@ picture img {
 .future {
   padding-bottom: 25px;
 }
-  
 
+
+/* contacts  */
+.contact-new p {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
   
+.contact-admin {
+  width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contact-admin > h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.contact-admin .admin-box {
+  border: 1px solid black;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-admin .admin-box > p {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  width: 700px;
+  text-align: left;
+}
+
+.contact-admin .admin-box > p:last-child {
+  width: 180px;
+}
+
+
+
+/* contact */
+.personal-information h3 {
+  font-size: 18px;
+  margin-top: 50px;
+}
+  
+.admin-entrance {
+  text-align: center;
+}
+
+
+
+/* users */
+.users-show {
+  width: 820px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.users-show > h3 {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.users-show table {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.users-show table td:first-child {
+  background: rgba(255, 197, 110, 0.5);
+  width: 30%;
+  height: 40px;
+}
+
+
+/* static_pages/about */
+.static-pages-about {
+  text-align: center;
+  margin-top: 50px;
+}
 
