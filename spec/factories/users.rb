@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :user do
-    name { 'okutani' }
-    sequence(:email) { |n| "okutani#{n}@example.com" }
-    password { '1234abcd' }
-    password_confirmation { '1234abcd' }
-    confirmed_at { Time.current }
+    name { 'Michael Kimura' }
+    email { "michael@icloud.com" }
+    password_digest { User.digest('password') }
+    activated { true }
+    activated_at { Time.zone.now }
   end
 end
