@@ -1,11 +1,11 @@
 require 'rails_helper'
-include TestHelper
 
 RSpec.describe 'site layout', type: :system do
   subject { page }
-  before { visit about_path }
+  before { visit root_path }
   let(:user) { create(:user) }
-  context 'access to about_path when not logged in' do
+  
+  context 'Access to root_path when not logged in' do
     it 'has the correct header links' do
       is_expected.to have_link nil, href: root_path
       is_expected.to have_link 'NEWS', href: manuscripts_path
@@ -22,7 +22,7 @@ RSpec.describe 'site layout', type: :system do
       is_expected.to have_link 'NJSの狙い', href: about_path
     end
   end
-  context 'access to about_path when logged in' do
+  context 'Access to root_path when logged in' do
     it 'has the correct header links' do
       log_in_as(user)
       is_expected.to_not have_link 'LOG IN', href: login_path

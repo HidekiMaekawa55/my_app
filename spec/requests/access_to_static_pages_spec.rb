@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Access to static_pages', type: :request do
-  context 'get #home' do
+  describe 'get #home' do
     before { get root_path }
     it 'responds successfully' do
       expect(response).to have_http_status 200
@@ -11,7 +11,7 @@ RSpec.describe 'Access to static_pages', type: :request do
     end
   end
   
-  context 'get #about' do
+  describe 'get #about' do
     before { get about_path }
     it 'responds successfully' do
       expect(response).to have_http_status 200
@@ -21,7 +21,7 @@ RSpec.describe 'Access to static_pages', type: :request do
     end
   end
   
-  context 'get #manager' do
+  describe 'get #manager' do
     before { get manager_path }
     it 'responds successfully' do
       expect(response).to have_http_status 200
