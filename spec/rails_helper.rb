@@ -65,6 +65,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   include ApplicationHelper
   include TestHelper
+  include SessionsHelper
 end
 
 Shoulda::Matchers.configure do |config|
