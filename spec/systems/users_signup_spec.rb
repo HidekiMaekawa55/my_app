@@ -11,7 +11,7 @@ RSpec.describe 'users signup', type: :system do
       fill_in 'Confirmation', with: 'password'
       click_button 'Create my account'
     end
-    it 'gets an flash message' do
+    it 'gets a flash message' do
       is_expected.to have_selector('.alert-info')
     end
     it 'redirected to root_path' do
