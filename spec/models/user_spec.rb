@@ -48,5 +48,11 @@ RSpec.describe User, type: :model do
         expect(user.reload.email).to eq 'original@example.com'
       end
     end
+    describe '#authenticated?(attribute, token)' do
+      let(:user) { create(:user) }
+      it 'return false' do
+        expect(user.authenticated?(:remember, '')).to be_falsy
+      end
+    end
   end
 end

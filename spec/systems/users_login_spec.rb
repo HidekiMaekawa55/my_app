@@ -32,6 +32,11 @@ RSpec.describe 'users login', type: :system do
         is_expected.to have_link 'LOG IN', href: login_path
         is_expected.to_not have_link 'ACCOUNT', href: '#'
       end
+      context 'Log out when not logged in' do
+        it 'redirected to root_path' do
+          is_expected.to have_current_path root_path
+        end
+      end
     end
   end
   
@@ -50,11 +55,17 @@ RSpec.describe 'users login', type: :system do
   end
   
   context 'login with valid email/invalid password' do
+    before do
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: ' '
+      click_button 'Log in'
+    end
+    it 'gets an flash message' do
+      is_expected.to have_selector('.alert-danger')
+    end
+    it 'render /login' do
+      is_expected.to have_current_path '/login'
+    end
   end
   
-  context 'login with remembering' do
-  end
-  
-  context 'login without remembering' do
-  end
 end

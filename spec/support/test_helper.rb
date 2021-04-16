@@ -8,6 +8,14 @@ module TestHelper
     visit login_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
+    uncheck 'session_remember_me'
     click_button 'Log in'
   end
+  
+  def log_in_with(user, remember_me)
+    post login_path, params: { session: { email: user.email,
+                                          password: user.password,
+                                          remember_me: remember_me} }
+  end
+  
 end
