@@ -37,14 +37,9 @@ class ManuscriptsController < ApplicationController
   end
   
   def destroy
-    @manuscript = Manuscript.find(params[:id])
-    if @manuscript.destroy
-      flash[:success] = "complite"
-      redirect_to manuscripts_path
-    else
-      flash[:danger] = "error"
-      redirect_to manuscripts_path
-    end
+    Manuscript.find(params[:id]).destroy
+    flash[:success] = "complite"
+    redirect_to manuscripts_path
   end
   
   private

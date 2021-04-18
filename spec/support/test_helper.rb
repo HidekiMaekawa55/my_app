@@ -12,10 +12,12 @@ module TestHelper
     click_button 'Log in'
   end
   
-  def log_in_with(user, remember_me)
-    post login_path, params: { session: { email: user.email,
-                                          password: user.password,
-                                          remember_me: remember_me} }
+  def log_in_with(user, remember_me: '1')
+    post login_path, params: { session: {
+      email: user.email,
+      password: user.password,
+      remember_me: remember_me,
+    } }
   end
   
 end

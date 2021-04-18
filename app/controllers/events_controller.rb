@@ -37,14 +37,10 @@ class EventsController < ApplicationController
   end
   
   def destroy
-    @event = Event.find(params[:id])
-    if @event.destroy
-      flash[:success] = "complite"
-      redirect_to events_path
-    else
-      flash[:danger] = "error"
-      redirect_to events_path
-    end
+    Event.find(params[:id]).destroy
+    @event.destroy
+    flash[:success] = "complite"
+    redirect_to events_path
   end
   
   private
