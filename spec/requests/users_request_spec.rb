@@ -54,5 +54,21 @@ RSpec.describe 'Users', type: :request do
         end
       end
     end
+    
+    describe '#user_params' do
+      context 'admin attribute to be edited via the web' do
+        before do
+          log_in_with(other_user)
+          patch user_path(other_user), params: { user: {
+            password: "password",
+            password_confirmation: "password",
+            admin: true
+          } }
+        end
+        it 'test' do
+          expect(other_user.reload.admin).not_to eq true
+        end
+      end
+    end
   end
 end
