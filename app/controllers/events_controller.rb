@@ -38,7 +38,6 @@ class EventsController < ApplicationController
   
   def destroy
     Event.find(params[:id]).destroy
-    @event.destroy
     flash[:success] = "complite"
     redirect_to events_path
   end

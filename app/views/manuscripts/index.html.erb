@@ -11,24 +11,7 @@
   <%= will_paginate %>
    
   <div class="box-container">
-    <% @manuscripts.each do |manuscript| %>
-      <%= link_to manuscript_path(manuscript) do %>
-        <div class="frame">
-          <picture>
-            <%= image_tag "static_pages/blue1.jpg" %>
-          </picture>
-          <div class="letters">
-            <h2><%= manuscript.title %></h2>
-            <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
-            <% if current_user && current_user.admin? %>
-              <%= link_to "編集", edit_manuscript_path(manuscript) %>
-              <%= link_to "削除", manuscript_path(manuscript), method: :delete,
-                                               data: { confirm: "You sure?" }%>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+    <%= render @manuscripts %>
   </div>
   
   <%= will_paginate %>
