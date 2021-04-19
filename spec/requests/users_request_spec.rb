@@ -65,7 +65,7 @@ RSpec.describe 'Users', type: :request do
             admin: true
           } }
         end
-        it 'test' do
+        it 'cannot change admin to true' do
           expect(other_user.reload.admin).not_to eq true
         end
       end
