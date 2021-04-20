@@ -7,9 +7,9 @@ RSpec.describe 'users signup', type: :system do
   context 'valid sigunup information' do
     before do
       visit signup_path
-      fill_in 'Name', with: 'valid user'
-      fill_in 'Email', with: 'valid@example.com'
-      fill_in 'Password', with: 'password'
+      fill_in 'Name',         with: 'valid user'
+      fill_in 'Email',        with: 'valid@example.com'
+      fill_in 'Password',     with: 'password'
       fill_in 'Confirmation', with: 'password'
       click_button 'Create my account'
     end
@@ -70,9 +70,9 @@ RSpec.describe 'users signup', type: :system do
   context 'invalid signup information' do
     before do
       visit signup_path
-      fill_in 'Name', with: ' '
-      fill_in 'Email', with: ' '
-      fill_in 'Password', with: ' '
+      fill_in 'Name',         with: ' '
+      fill_in 'Email',        with: ' '
+      fill_in 'Password',     with: ' '
       fill_in 'Confirmation', with: ' '
       click_button 'Create my account'
     end

@@ -9,7 +9,7 @@ RSpec.describe 'users login', type: :system do
   
   context 'login with valid information followed by logout' do
     before do
-      fill_in 'Email', with: 'valid@example.com'
+      fill_in 'Email',    with: 'valid@example.com'
       fill_in 'Password', with: 'password'
       click_button 'Log in'
     end
@@ -18,7 +18,7 @@ RSpec.describe 'users login', type: :system do
     end
     it '[IN]アカウントページ、[OUT]ログインページ。' do
       is_expected.to_not have_link 'LOG IN', href: login_path
-      is_expected.to have_link 'ACCOUNT', href: '#'
+      is_expected.to have_link 'ACCOUNT',    href: '#'
     end
     context 'Log out when logged in' do
       before do
@@ -29,7 +29,7 @@ RSpec.describe 'users login', type: :system do
         is_expected.to have_current_path root_path
       end
       it '[IN]ログインページ、[OUT]アカウントページ。' do
-        is_expected.to have_link 'LOG IN', href: login_path
+        is_expected.to have_link 'LOG IN',      href: login_path
         is_expected.to_not have_link 'ACCOUNT', href: '#'
       end
       context 'Log out when not logged in' do
@@ -42,7 +42,7 @@ RSpec.describe 'users login', type: :system do
   
   context 'login with invalid information' do
     before do
-      fill_in 'Email', with: ' '
+      fill_in 'Email',    with: ' '
       fill_in 'Password', with: ' '
       click_button 'Log in'
     end
@@ -56,7 +56,7 @@ RSpec.describe 'users login', type: :system do
   
   context 'login with valid email/invalid password' do
     before do
-      fill_in 'Email', with: user.email
+      fill_in 'Email',    with: user.email
       fill_in 'Password', with: ' '
       click_button 'Log in'
     end

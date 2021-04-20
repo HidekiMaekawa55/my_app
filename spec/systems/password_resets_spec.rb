@@ -69,7 +69,7 @@ RSpec.describe 'password resets', type: :system do
       describe 'password resets form' do
         context 'If password and confirmation values are different' do
           before do
-            fill_in 'Password', with: 'foobaz'
+            fill_in 'Password',     with: 'foobaz'
             fill_in 'Confirmation', with: 'barquux'
             click_button 'Update password'
           end
@@ -79,7 +79,7 @@ RSpec.describe 'password resets', type: :system do
         end
         context 'If password is empty' do
           before do
-            fill_in 'Password', with: ''
+            fill_in 'Password',     with: ''
             fill_in 'Confirmation', with: ''
             click_button 'Update password'
           end
@@ -89,7 +89,7 @@ RSpec.describe 'password resets', type: :system do
         end
         context 'valid password and confirmation' do
           before do
-            fill_in 'Password', with: 'information'
+            fill_in 'Password',     with: 'information'
             fill_in 'Confirmation', with: 'information'
             click_button 'Update password'
           end
