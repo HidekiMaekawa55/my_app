@@ -18,8 +18,8 @@ class ContactsController < ApplicationController
       flash[:success] = "送信が完了しました。"
       redirect_to contacts_thanks_path
     else
-      flash[:danger] = @contact.errors.full_messages
-      redirect_to new_contact_path
+      flash.now[:danger] = @contact.errors.full_messages
+      render 'new'
     end
   end
   

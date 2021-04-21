@@ -13,8 +13,8 @@ RSpec.describe 'contacts post', type: :system do
     it 'gets a flash message' do
       is_expected.to have_selector('.alert-danger')
     end
-    it 'redirected to new_contact_path' do
-      is_expected.to have_current_path new_contact_path
+    it 'render new' do
+      is_expected.to have_current_path '/contacts'
     end
   end
   
