@@ -37,6 +37,18 @@ Rails.application.configure do
   host = 'https://0b89cd0f56514d1497e2b8901fc6d9b6.vfs.cloud9.ap-northeast-1.amazonaws.com'
   
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:                 587,
+    address:              'smtp.gmail.com',
+    domain:               'gmail.com',
+    user_name:            'njs.20598@gmail.com',
+    password:             'ccmigvvpjcvrnxrn',
+    authentication:       'login',
+    enable_starttls_auto: true
+  }
+  
 
   config.action_mailer.perform_caching = false
 
