@@ -15,6 +15,11 @@ class CreateCredits < ActiveRecord::Migration[6.0]
       t.text :comment
 
       t.timestamps
+      
+      t.index :undergraduate
+      t.index :department
+      t.index :fulfillment
+      t.index :ease
     end
   end
 end
