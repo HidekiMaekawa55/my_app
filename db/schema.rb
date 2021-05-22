@@ -48,6 +48,10 @@ ActiveRecord::Schema.define(version: 2021_03_29_123139) do
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["department"], name: "index_credits_on_department"
+    t.index ["ease"], name: "index_credits_on_ease"
+    t.index ["fulfillment"], name: "index_credits_on_fulfillment"
+    t.index ["undergraduate"], name: "index_credits_on_undergraduate"
   end
 
   create_table "events", force: :cascade do |t|
@@ -62,6 +66,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_123139) do
     t.integer "club_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["club_id"], name: "index_likes_on_club_id"
   end
 
   create_table "manuscripts", force: :cascade do |t|
