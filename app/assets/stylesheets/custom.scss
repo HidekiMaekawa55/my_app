@@ -19,13 +19,14 @@ body > .container {
 
 /* header */
 
+.navbar-header {
+  height: 122px;
+}
+
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
+  padding: 0 22px 0 15px;
   color: black;
   text-transform: uppercase;
-  letter-spacing: -1px;
   font-weight: bold;
   line-height: 122px;
   font-size: 55px;
@@ -33,24 +34,19 @@ body > .container {
   text-decoration: none;
 }
 
-
-header {
-  background: white;
-  height: 122px !important;
-  border: 1px solid rgba(191, 191, 191, 1) !important;
-  box-shadow: 0 1px 10px;
-}
-
 #logo-help {
   font-size: 13px;
-  float: left;
   color: white;
   line-height: 25px;
-  margin-top: 0;
-  margin-bottom: 0;
   opacity: 0.9;
   padding: 36px 15px;
   color: black !important;
+}
+
+nav {
+  background: white;
+  border: 1px solid rgba(191, 191, 191, 1) !important;
+  box-shadow: 0 1px 10px;
 }
 
 
@@ -59,10 +55,75 @@ header {
   line-height: 121px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  font-size: 18px;
+  font-size: 16px;
   transition-duration: 0.3s;
 }
 
+@media (max-width: 1000px) {
+  .nav > li > a {
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-header {
+    height: 100%;
+  }
+
+  #logo {
+    padding: 0 22px 0 15px;
+    color: black;
+    text-transform: uppercase;
+    line-height: 18.66667vw;
+    font-weight: bold;
+    font-size: 55px;
+    letter-spacing: -1.6px;
+    text-decoration: none;
+    font-size: 10vw;
+  }
+  
+  #logo-help {
+    float: none !important;
+    font-size: 3vw;
+    color: white;
+    padding: 0 !important;
+    display: table-cell;
+    vertical-align: middle;
+    height: 18.66667vw;
+    line-height: 1.4;
+    opacity: 0.9;
+    padding: 36px 15px;
+    color: black !important;
+  }
+  
+  nav {
+    background: white;
+    border: 1px solid rgba(191, 191, 191, 1) !important;
+    box-shadow: 0 1px 10px;
+  }
+  
+  .nav > li > a {
+    color: black;
+    line-height: 40px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 16px;
+    transition-duration: 0.3s;
+  }
+}
+
+  .navbar-toggle {
+    box-sizing: border-box;
+    border: none;
+    width: 50px;
+    height: 50px;
+    height: 18.66667vw;
+    margin: 0 8px 0 0;
+  }
+
+  .navbar-header > button:hover {
+    background-color: transparent !important;
+  }
 
 /* footer */
 
@@ -190,7 +251,7 @@ input {
 }
 .slick-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .mypattern{
   width: 100%;
@@ -877,3 +938,11 @@ picture img {
   margin-top: 50px;
 }
 
+
+
+/* tablet css */
+@media (max-width: 1024px) {
+  .container {
+    
+  }
+}

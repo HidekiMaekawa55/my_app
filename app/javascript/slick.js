@@ -10,6 +10,24 @@
       arrows: false,
       centerMode: true,
       centerPadding: '20%',
+      pauseOnFocus: false,
+      pauseOnHover: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            centerMode: false,
+            arrows: false,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            arrows: false,
+            dots: false,
+          }
+        },
+      ]
     });
   }); 
 }
