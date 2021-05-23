@@ -22,13 +22,11 @@ test:
 
   
 production:
-  <<: *default
-  database: db/production.sqlite3
-  # adapter: mysql2
-  # encoding: utf8
-  # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # database: my_app
-  # username: root
-  # password: 'Hideki0509'
-  # socket: /var/lib/mysql/mysql.sock
-  # timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: my_app
+  username: root
+  password: 'Hideki0509'
+  socket: /var/lib/mysql/mysql.sock
+  timeout: 5000
