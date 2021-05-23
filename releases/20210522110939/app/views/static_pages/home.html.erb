@@ -1,0 +1,48 @@
+<div class="content">
+  <div class="slider mypattern">
+    <%= link_to image_tag('static_pages/group1.jpg'), club_path(23) %>
+    <%= link_to image_tag('static_pages/group2.jpg'), club_path(47) %>
+    <%= link_to image_tag('static_pages/group3.jpg'), club_path(54) %>
+    <%= link_to image_tag('static_pages/group4.jpg'), club_path(75) %>
+    <%= link_to image_tag('static_pages/group5.jpg'), club_path(12) %>
+    <%= link_to image_tag('static_pages/group6.jpg'), club_path(78) %>
+  </div>
+</div>
+
+<div class="box-design">
+  <h1>University News</h1>
+  <div class="box-container">
+    <% @manuscripts.each do |manuscript| %>
+      <%= link_to manuscript_path(manuscript) do %>
+        <div class="frame">
+          <picture>
+            <%= image_tag "static_pages/blue1.jpg" %>
+          </picture>
+          <div class="letters">
+            <h2><%= manuscript.title %></h2>
+            <p><%= manuscript.created_at.to_s(:datetime_jp) %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="box-design event-box">
+  <h1>University Events</h1>
+  <div class="box-container">
+    <% @events.each do |event| %>
+      <%= link_to event_path(event) do %>
+        <div class="frame">
+          <picture>
+            <%= image_tag "static_pages/orange.jpg" %>
+          </picture>
+          <div class="letters">
+            <h2><%= event.title %></h2>
+            <p><%= event.created_at.to_s(:datetime_jp) %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

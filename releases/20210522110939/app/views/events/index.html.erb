@@ -1,0 +1,19 @@
+<%= provide(:title, 'Event List') %>
+
+  <div class="box-design common">
+    <h1>University Event</h1>
+    <% if current_user && current_user.admin? %>
+      <div class="admin_post">
+        <%= link_to "Event投稿", new_event_path %>
+      </div>
+    <% end %>
+    
+    <%= will_paginate %>
+     
+    <div class="box-container">
+      <%= render @events %>
+    </div>
+    
+    <%= will_paginate %>
+    
+  </div>

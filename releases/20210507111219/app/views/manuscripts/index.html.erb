@@ -1,0 +1,19 @@
+<%= provide(:title, 'News List') %>
+
+<div class="box-design common">
+  <h1>University News</h1>
+  <% if current_user && current_user.admin? %>
+    <div class="admin_post">
+      <%= link_to "News投稿", new_manuscript_path %>
+    </div>
+  <% end %>
+  
+  <%= will_paginate %>
+   
+  <div class="box-container">
+    <%= render @manuscripts %>
+  </div>
+  
+  <%= will_paginate %>
+  
+</div>

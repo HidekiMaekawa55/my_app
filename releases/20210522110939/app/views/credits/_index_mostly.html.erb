@@ -1,0 +1,89 @@
+<div class="search-entire">
+  <h3>授業・教師　検索</h3>
+  <%= form_with url: credits_search_path, method: :get, local: true do |f| %>
+    <div class="search-container">
+      <div class="search-input">
+        <%= f.text_field :word %>
+      </div>
+      <div class="search-submit">
+        <%= f.submit :search %> 
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="credit-index">
+  <h1>Easy Credits</h1>
+  <%= link_to "授業評価を書く", new_credit_path %> 
+  
+  <div class="order">
+    <%= link_to "新しい順", credits_path, id: "select_order" %>
+    <%= link_to "単位取得度順", credits_easy_path %>
+    <%= link_to "内容充実度が高い順", credits_full_path %>
+  </div>
+  
+  <% @credits.each do |credit| %>
+    <div class="credit-box">
+      <h1><%= credit.class_name %></h1>
+      <ul class="type">
+        <li><%= credit.undergraduate %></li>
+        <li><%= credit.department %></li>
+        <li><%= credit.teacher_name %>先生</li>
+        <li><%= credit.created_at.to_s(:datetime_jp) %></li>
+      </ul>
+      
+      <ul class="rank">
+        <li>内容充実度：
+          <% if credit.fulfillment == "5" %>
+            <span class="star5_rating" data-rate="5"></span>
+          <% elsif credit.fulfillment == "4" %>
+            <span class="star5_rating" data-rate="4"></span>
+          <% elsif credit.fulfillment == "3" %>
+            <span class="star5_rating" data-rate="3"></span>
+          <% elsif credit.fulfillment == "2" %>
+            <span class="star5_rating" data-rate="2"></span>
+          <% else %>
+            <span class="star5_rating" data-rate="1"></span>
+          <% end %>
+        </li>
+        
+        <li>単位取得度：
+          <% if credit.ease == "5" %>
+            <span class="star5_rating" data-rate="5"></span>
+          <% elsif credit.fulfillment == "4" %>
+            <span class="star5_rating" data-rate="4"></span>
+          <% elsif credit.fulfillment == "3" %>
+            <span class="star5_rating" data-rate="3"></span>
+          <% elsif credit.fulfillment == "2" %>
+            <span class="star5_rating" data-rate="2"></span>
+          <% else %>
+            <span class="star5_rating" data-rate="1"></span>
+          <% end %>
+        </li>
+      </ul>
+      
+      <dl class="credit-container">
+        <div class="attendance common">
+          <dt>出席</dt>
+          <dd><%= credit.attendance %></dd>  
+        </div>
+        <div class="text common">
+          <dt>教科書</dt>
+          <dd><%= credit.textbook %></dd>
+        </div>
+        <div class="test common">
+          <dt>テスト情報</dt>
+          <dd>中間：<%= credit.mid_test_format %>　期末：<%= credit.final_test_format %>　持ち込み：<%= credit.item %></dd>
+        </div>
+      </dl>
+      
+        <p><%= credit.comment %></p>
+        <% if current_user && current_user.admin? %>
+          <%= link_to "削除", credit_path(credit), method: :delete,
+                                           data: { confirm: "You sure?" }%>
+        <% end %>
+    </div>
+  <% end %>
+  
+  <%= will_paginate %>
+</div>

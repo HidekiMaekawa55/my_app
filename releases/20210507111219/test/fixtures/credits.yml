@@ -1,0 +1,27 @@
+one:
+  undergraduate: MyString
+  department: MyString
+  class_name: MyString
+  teacher_name: MyString
+  fulfillment: MyString
+  ease: MyString
+  attendance: MyString
+  mid_test_format: MyString
+  final_test_format: MyString
+  item: MyString
+  textbook: MyString
+  comment: MyText
+
+two:
+  undergraduate: MyString
+  department: MyString
+  class_name: MyString
+  teacher_name: MyString
+  fulfillment: MyString
+  ease: MyString
+  attendance: MyString
+  mid_test_format: MyString
+  final_test_format: MyString
+  item: MyString
+  textbook: MyString
+  comment: MyText
