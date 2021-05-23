@@ -1,0 +1,47 @@
+version: '3.5'
+services:
+  db:
+    image: mariadb:10.3
+    ports: 
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: my_app
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Hideki0509
+    volumes: 
+      - mysql-data:/var/lib/mysql
+
+  unicorn:
+    build:
+      context: .
+      dockerfile: "Pro.Dockerfile"
+    command: bundle exec unicorn -c /my_app/config/unicorn.conf.rb 
+    tty: true 
+    stdin_open: true
+    depends_on:
+      - db 
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/my_app:cached 
+      - tmp-data:/my_app/tmp/sockets
+      - public-data:/my_app/public
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    restart: always
+    volumes:
+      - tmp-data:/my_app/tmp/sockets
+      - public-data:/my_app/public
+    depends_on:
+      - unicorn
+
+volumes:
+  public-data:
+  tmp-data:
+  mysql-data:
+    driver: local

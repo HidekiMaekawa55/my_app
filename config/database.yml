@@ -30,3 +30,4 @@ production:
   password: 'Hideki0509'
   socket: /var/lib/mysql/mysql.sock
   timeout: 5000
+  host: db
