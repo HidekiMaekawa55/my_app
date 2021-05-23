@@ -6,8 +6,9 @@ services:
       - '3306:3306'
     environment:
       MYSQL_DATABASE: my_app
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: root
-      MYSQL_PASSWORD: Hideki0509
+      MYSQL_PASSWORD: password
     volumes: 
       - mysql-data:/var/lib/mysql
 
@@ -15,7 +16,13 @@ services:
     build:
       context: .
       dockerfile: "Pro.Dockerfile"
+<<<<<<< HEAD
     command: bundle exec unicorn -p 3000 -c /my_app/unicorn.conf.rb -E production
+=======
+    environment:
+      - RAILS_ENV=production        
+    command: bundle exec unicorn -p 3000 -c /my_app/unicorn.conf.rb -E production 
+>>>>>>> 8ba473092377b765948bea43c8eda87702b464aa
     tty: true 
     stdin_open: true
     depends_on:

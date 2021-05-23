@@ -27,7 +27,11 @@ production:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: my_app
   username: root
+<<<<<<< HEAD
   password: Hideki0509
   socket: /var/lib/mysql/mysql.sock
+=======
+  password: password
+>>>>>>> 8ba473092377b765948bea43c8eda87702b464aa
   timeout: 5000
   host: db

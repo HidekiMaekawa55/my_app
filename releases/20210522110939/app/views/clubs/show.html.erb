@@ -1,0 +1,59 @@
+<div class="club-show">
+  <h1><%= @club.name %></h1>
+  <% if current_user && current_user.admin? %>
+    <p><%= link_to "編集", edit_club_path(@club) %></p>
+  <% end %>
+
+  <div class="club-pic">
+    <%= image_tag "club/club#{@club.id}.jpg" %>
+  </div>
+  
+  <div class="club-content">
+    <%= @club.content %>
+  </div>
+  
+  <% unless @club.date.blank? %>
+  <table border="1" class="club-table">
+    <tr>
+      <td>活動曜日・時間</td>
+      <td><%= @club.date %></td>
+    </tr>
+    <tr>
+      <td>部員数</td>
+      <td><%= @club.member %></td>
+    </tr>
+    <tr>
+      <td>活動場所</td>
+      <td><%= @club.place %></td>
+    </tr>
+    <% unless @club.league.blank? %>
+      <tr>
+        <td>所属リーグ</td>
+        <td><%= @club.league %></td>
+      </tr>
+    <% end %>
+  </table>
+  <% end %>
+  
+  <%= link_to "話を聞きたい", "/likes/#{@club.id}/create",
+      data: {confirm: "あたなの情報を送信します。よろしいですか？"} %>
+  
+  <div class="club-likes">
+    <% if current_user %>
+      <% if (current_user.email == @club.email) || current_user.admin?  %>
+        <h1>興味を持ってくれている方々</h1>
+        <% @likes.each do |like| %>
+          <div class="club-likes-user-box">
+            <p><%= like.user.name %></p>
+            <p class="mail"><%= like.user.email %></p>
+            <p><%= like.created_at.to_s(:datetime_jp) %></p>
+          </div>
+        <% end %>
+        
+        <%= will_paginate @likes %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
