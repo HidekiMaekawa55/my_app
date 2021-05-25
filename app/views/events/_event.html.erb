@@ -6,11 +6,6 @@
     <div class="letters">
       <h2><%= event.title %></h2>
       <p><%= event.created_at.to_s(:datetime_jp) %></p>
-      <% if current_user && current_user.admin? %>
-        <%= link_to "編集", edit_event_path(event) %>
-        <%= link_to "削除", event_path(event), method: :delete,
-                                         data: { confirm: "You sure?" }%>
-      <% end %>
     </div>
   </div>
 <% end %>
