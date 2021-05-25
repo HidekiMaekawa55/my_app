@@ -1702,3 +1702,422 @@ Club.create!(name: "大学祭運営委員会",
             place: "南山大学 G棟教室",
             league: "",
             email: "university_festival@njs.com")
+
+Manuscript.create!(title: "【注意喚起】自動車通学禁止と迷惑駐車について",
+                  content: "4月26日（月）、27日（火）および28日（水）の連日、セブン・イレブン山手通2丁目店、セブン・イレブン山里町店の両店舗に迷惑駐車を行った学生がありました。それぞれの店舗より、当該学生と大学に対して厳しい苦情の申し立てがありました。
+
+本件を含めて、大学近隣店舗より迷惑駐車に関する苦情が多数寄せられています（2021年度迷惑駐車発生件数［4/28現在］：6件）。
+
+南山大学は自動車通学を禁止しています。軽率な行動を取らないように注意してください。")
+
+Manuscript.create!(title: "【お知らせ】紀伊國屋書店（コパン3階）からのご案内",
+                  content: "＜問い合わせ先＞
+株式会社紀伊國屋書店
+南山大学ブックセンター（コパン3階）
+営業時間：　月曜日～金曜日 9：45～17：15
+　　　　　　※6/3(木)は10：30～15：30 営業
+　　　　　　※土日祝祭日および本学事務休業日は休業
+電話番号：　052-837-5201")
+
+Manuscript.create!(title: "大学院入試説明会（第1回）について",
+                  content: "【お知らせ】大学院入試説明会（第1回）について
+日時： 5月15日（土）13:00～15:00
+会場： S棟およびA棟
+■ 参加には事前申込が必要です。
+■ 学部1・2・3年次生の方のご参加も歓迎します。")
+
+Manuscript.create!(title: "【お知らせ】2021年度 協定校主催短期プログラムについて",
+                  content: "本学の協定校主催短期プログラムのリストです（5月18日更新）
+るもののみ受講できます（本学での単位認定は不可）。
+このリストは随時更新し、PORTAに掲載します。
+
+＜問い合わせ先＞
+南山大学国際センター事務室（派遣留学係）
+E-mail: study-abroad@nanzan-u.ac.jp
+※メイルでお問い合わせの際は必ず「氏名・学生番号・（大学名）の短期プログラム」と件名に明記してください。")
+
+Manuscript.create!(title: "【お知らせ】PORTAの臨時メンテナンスについて",
+                  content: "PORTAの臨時メンテナンスを以下の日程で実施いたします。
+
+　2021年5月26日18時～20時")
+
+Manuscript.create!(title: "【重要】「学生による授業評価」アンケートについて（再掲）",
+                  content: "2021年度【第1クォーター】授業評価アンケートを実施します。
+詳細を確認し、PORTAでの回答をお願いします。
+
+【回答期間】5月14日（金）～5月27日（木）
+アンケート回答方法の詳細は、添付のマニュアルを確認してください。
+南山大学の授業をより良いものにしていくために、ぜひアンケートにご協力ください。")
+
+Event.create!(title: "【新入生の皆様へ】フレッシュマン祭のお知らせ",
+              content: "3月31日（水）～4月3日（土）の新入生ガイダンス期間に、新入生向けのクラブ・サークル紹介を南山大学内およびオンライン上にて行います。このイベントは学生団体であるフレッシュマン祭実行委員会が主催しており、南山大学に所属する数多くの公認団体・準公認団体・有志団体が、キャンパス内でのビラ配布やオンライン上での説明会を実施するというものです。
+新入生の皆様には、この機会にご興味のある団体の情報を得ていただければ幸いです。
+
+※参加団体は感染症対策を実施のうえで本活動を実施します。
+------------------------------------------------------------
+
+＜学内 対面企画＞
+・実施内容：課外活動団体によるビラ配布
+・実施期間：3月31日（水）12時30分～17時00分　
+　　　　　　4月2日（金）10時00分～17時00分　
+　　　　　　4月3日（土）10時00分～15時00分
+・実施場所：メインストリート、グリーンエリア
+　　　　　　（3月31日はメインストリートのみ）
+＜オンライン企画＞
+・実施内容：【特別企画】各クラブによる演技や各クラブの紹介。　
+　　　　　　【クラブパラダイス】27団体によるクラブ紹介、一度に様々なクラブを知ることができます。
+・実施期間：3月31日（水）～4月3日（土）
+・実施場所：YouTube、Zoom")
+
+Event.create!(title: "【クラブ活動】課外活動説明会について",
+              content: "公認・準公認団体責任者
+有志団体・学生交流センターコアグループ責任者　各位
+2021年度の課外活動に関する説明会を開催します。幹部2名以上で必ずご参加くださいますようお願いします。
+なお、公認・準公認団体と、有志団体・学生交流センターコアグループは、開催時刻が異なりますので、案内文書を間違えないように、ご確認ください。
+説明会は、新型コロナウイルス感染症対策のため、Zoomでの配信とさせていただきます。
+※ZoomのミーティングIDやパスコード等Zoomの詳細については後日ご連絡いたします。")
+
+Event.create!(title: "【UNIVAS】リーダーズキャンプの募集の開始について",
+              content: "運動部キャプテン（主将）の学生を対象としたリーダーズキャンプを今年度も実施することが決定しましたのでご案内いたします。
+
+本取組では、キャプテン（主将）が競技種目・大学横断型の交流を行い、競技だけではなく、社会で求められるリーダー像を学び、様々な視点や価値観を共有することで、キャプテン（主将）としての心構えや考え方を身に付けることを目指しています。
+なお、本企画実施にあたっては、新型コロナウイルス感染症の状況について注視し、厚生労働省のメッセージ等に沿って十分な対策を実施する予定です。 ")
+
+Event.create!(title: "【お知らせ】安全講習会の実施について",
+              content: "課外活動を行う際の熱中症対策や禁煙講習会、感染症対策について講習会を行います。
+日時： 2021年5月19日（水） 13：35～14：45
+配信方法： Zoom （ミーティングIDやパスコードは改めてご案内いたします。）
+詳細は添付ファイルをご確認ください。
+※全団体参加必須となっております。どうしても参加できない場合は学生課までお知らせください。")
+
+Event.create!(title: "【イベント案内】学生交流センター 学生TA募集オンライン説明会の開催",
+              content: "学生交流センターセントルム 学生スタッフ(TA)募集中!
+
+学生交流センター
+学生交流センターは学生たちの間で「セントルム」と呼 ばれ、学生の憩いの場として親しまれています。セント ルムではランチタイムになると学生スタッフや他の学生 と交流することができます。また、月に1~2回、学生た ちの交流を促進するランチトークイベントを開催してい ます。
+
+活動内容
+・イベント企画・実施運営
+・学生交流センター利用者の対応
+・ランチミーティングの開催
+
+こんなひとにおすすめ!
+・学内イベントを企画してみたい
+・交流の輪を広げたい
+・大学生活の中で何かに挑戦したい
+
+オンライン説明会
+4月19日(月)、4月28日(水)、 5月7日(金)
+※21:00-21:40
+
+【参加方法】 1PORTAにZOOMのURLを掲示します。ご参 照ください。 2以下の連絡先にご連絡ください。個別に ZOOMのURLをお送りします。 ※実施時間に参加できない場合はセントル ムの連絡先にご連絡ください。
+
+【連絡先】学生交流センターセントルム 代表2019HJ073 大平珠世
+Email centrumta201809@gmail.com Instagram nanzan_centrum
+Twitter @nanzan_gkss")
+
+Event.create!(title: "SSRからのお知らせ】「トレーニングルーム」、「ウエイトルーム」新規団体利用許可について",
+              content: "本年度（21年度）より「トレーニングルーム」、「ウエイトルーム」新規団体利用を希望される体育系クラブ（体育会・公認団体・準公認団体）は次の期間にSSRへご相談ください。
+
+1. 申請対象団体
+　「トレーニングルーム」：体育系クラブ（体育会・公認団体・準公認団体）
+　「ウエイトルーム」：体育会で19年度トレーニングルームの利用許可の出ている団体であること
+
+2. 問合せ期間：5月6日（木）~ 5月14日(金)
+
+3. 問合せ方法：SSR Email: gakusei-ssr@nanzan-u.ac.jpへ連絡をして下さい")
+
+Credit.create!(undergraduate: "経営学部",
+               department: "経営学科",
+               class_name: "経営学A",
+               teacher_name: "佐藤二郎",
+               fulfillment: "4",
+               ease: "2",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "両方なし",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "専門用語が多く、とても難しいです。単位を取るのは簡単ではありません。"
+               )
+               
+Credit.create!(undergraduate: "経済学部",
+               department: "経済学科",
+               class_name: "経済学A",
+               teacher_name: "安田健二",
+               fulfillment: "4",
+               ease: "5",
+               attendance: "とらない",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "８回目と１４回目だけ授業にでて、レポートの話を聞けば単位はとれます。"
+               )
+
+Credit.create!(undergraduate: "人文学部",
+               department: "日本文化学科",
+               class_name: "言語学概論B",
+               teacher_name: "青柳宏",
+               fulfillment: "5",
+               ease: "1",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書なし、または不要",
+               comment: "内容は、興味があればかなり面白い。しかし勉強しないと全くついていけない。"
+               )
+
+Credit.create!(undergraduate: "外国語学部",
+               department: "英米学科",
+               class_name: "言語研究の基礎",
+               teacher_name: "柴垣亮介",
+               fulfillment: "5",
+               ease: "3",
+               attendance: "たまにとる",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書なし、または不要",
+               comment: "生徒との距離が近い先生。
+テストもすべて授業のプリントから出題されるので、授業を聞いておけば解ける問題。"
+               )
+
+Credit.create!(undergraduate: "経済学部",
+               department: "経済学科",
+               class_name: "言語学概論B",
+               teacher_name: "吉根勝美",
+               fulfillment: "5",
+               ease: "4",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "計量経済学について学びます。優しい教授です。"
+               )
+
+Credit.create!(undergraduate: "法学部",
+               department: "法律学科",
+               class_name: "社会学概論",
+               teacher_name: "松戸",
+               fulfillment: "5",
+               ease: "4",
+               attendance: "とらない",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "日本社会の諸問題について、不思議感を得るための講義"
+               )
+
+Credit.create!(undergraduate: "外国語学部",
+               department: "スペイン・ラテンアメリカ学科",
+               class_name: "スペインの芸術",
+               teacher_name: "小坂",
+               fulfillment: "5",
+               ease: "5",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書なし、または不要",
+               comment: "スペインについての授業。プリントが配布され、括弧に先生の言う言葉を埋めていくだけ。かなり楽単。"
+               )
+
+Credit.create!(undergraduate: "人文学部",
+               department: "キリスト教学科",
+               class_name: "東アジアの考古学",
+               teacher_name: "西江清高",
+               fulfillment: "5",
+               ease: "5",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "主に中国初期王朝であるが、レポートは、中国に関してであればなんでもよし。"
+               )
+
+Credit.create!(undergraduate: "外国語学部",
+               department: "ドイツ学科",
+               class_name: "異文化コミュニケーション",
+               teacher_name: "BayerieinOliver",
+               fulfillment: "5",
+               ease: "5",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "毎週4人で行うプレゼンテーションが楽しいです"
+               )
+
+Credit.create!(undergraduate: "外国語学部",
+               department: "英米学科",
+               class_name: "宗教学概論",
+               teacher_name: "ムンシ・ロジェ・バンジラ",
+               fulfillment: "5",
+               ease: "5",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "両方なし",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "出席をして、最終レポートを書くだけです。とても楽です。"
+               )
+
+Credit.create!(undergraduate: "法学部",
+               department: "法律学科",
+               class_name: "法と経済",
+               teacher_name: "小林佳世子",
+               fulfillment: "4",
+               ease: "3",
+               attendance: "とらない",
+               mid_test_format: "両方なし",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "法と経済の関連を学びます。マクロ、ミクロの知識が必要です。"
+               )
+
+Credit.create!(undergraduate: "法学部",
+               department: "法律学科",
+               class_name: "租税法A",
+               teacher_name: "清野悦郎",
+               fulfillment: "3",
+               ease: "5",
+               attendance: "とらない",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み可能",
+               textbook: "教科書なし、または不要",
+               comment: "小テスト５回のみで出席はとらない。"
+               )
+
+Credit.create!(undergraduate: "国際教養学部",
+               department: "国際教養学科",
+               class_name: "国際協力論",
+               teacher_name: "高田",
+               fulfillment: "5",
+               ease: "3",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "誰のための国際協力なのか検討をしました。"
+               )
+
+Credit.create!(undergraduate: "国際教養学部",
+               department: "国際教養学科",
+               class_name: "グローバル化とメディア",
+               teacher_name: "中村",
+               fulfillment: "5",
+               ease: "3",
+               attendance: "とらない",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "メディアがグローバル化の世の中でどのような影響を与えているか"
+               )
+
+Credit.create!(undergraduate: "外国語学部",
+               department: "英米学科",
+               class_name: "歴史の諸相４",
+               teacher_name: "植村直樹",
+               fulfillment: "3",
+               ease: "4",
+               attendance: "たまにとる",
+               mid_test_format: "レポートのみ",
+               final_test_format: "レポートのみ",
+               item: "テストなし",
+               textbook: "教科書なし、または不要",
+               comment: "明治時代から戦後のアメリカと日本の歴史について学べる授業"
+               )
+
+Credit.create!(undergraduate: "経営学部",
+               department: "経営学科",
+               class_name: "会計原理",
+               teacher_name: "窪田裕一",
+               fulfillment: "5",
+               ease: "3",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "プリントが配布され、該当箇所を各自が購入したテキストで復習する"
+               )
+
+Credit.create!(undergraduate: "経営学部",
+               department: "経営学科",
+               class_name: "会計原理",
+               teacher_name: "窪田裕一",
+               fulfillment: "5",
+               ease: "4",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "最後の授業でテストで出る問題を教えてくれる。テキストさえ買っておけば問題ない。"
+               )
+
+Credit.create!(undergraduate: "総合政策学部",
+               department: "総合政策学科",
+               class_name: "現代企業論",
+               teacher_name: "金綱基志",
+               fulfillment: "4",
+               ease: "3",
+               attendance: "とらない",
+               mid_test_format: "レポートのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書なし、または不要",
+               comment: "レジュメ通りに進んでいきます。たまにあてられます"
+               )
+
+Credit.create!(undergraduate: "経営学部",
+               department: "経営学科",
+               class_name: "歴史の諸相３",
+               teacher_name: "岡田宏太郎",
+               fulfillment: "3",
+               ease: "3",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "テストのみ",
+               final_test_format: "両方なし",
+               item: "持ち込み不可能",
+               textbook: "教科書なし、または不要",
+               comment: "映像や資料をもとに説明がなされます"
+               )
+
+Credit.create!(undergraduate: "法学部",
+               department: "法律学科",
+               class_name: "法哲学",
+               teacher_name: "田中実",
+               fulfillment: "3",
+               ease: "1",
+               attendance: "とらない",
+               mid_test_format: "テストのみ",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "きびしすぎる。相当勉強したい人でないと取らない方がいい。"
+               )
+
+Credit.create!(undergraduate: "経営学部",
+               department: "経営学科",
+               class_name: "経営学A",
+               teacher_name: "佐藤二郎",
+               fulfillment: "4",
+               ease: "3",
+               attendance: "ほぼ毎回取る",
+               mid_test_format: "両方なし",
+               final_test_format: "テストのみ",
+               item: "持ち込み不可能",
+               textbook: "教科書必要",
+               comment: "テスト勉強にしっかりと時間を取る必要があります。"
+               )

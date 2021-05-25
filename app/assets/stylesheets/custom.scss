@@ -313,8 +313,10 @@ input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  // justify-content: center;
   clear: both;
 }
+
 
 .box-container a {
   text-decoration: none;
@@ -339,21 +341,21 @@ input {
 }
 
 .box-container:after {
-    content: "";
-    display: block;
-    width: 370px;
-    height: 0;
+  content: "";
+  display: block;
+  width: 370px;
+  height: 0;
 }
 
 picture img {
-  width: 370px;
-  height: 250px;
+  width: 100%;
+  height: 64%;
 }
 
 .letters {
   margin: 0 auto;
-  width: 370px;
-  height: 145px;
+  width: 100%;
+  height: 36%;
   transition: 0.7s;
   text-decoration: none;
   color: black;
@@ -373,10 +375,52 @@ picture img {
   right: 5px;
 }
 
-
 .event-box {
   margin-top: 100px;
 }
+
+
+@media (max-width: 1200px) {
+  .box-container {
+    justify-content: center;
+  }
+  
+  .frame {
+    margin: 0 20px 30px 20px;
+  }
+  
+  .box-container:after {
+    width: 370px;
+    margin: 0 20px 30px 20px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .frame {
+    width: 320px;
+    height: 330px;
+  }
+  .letters h2 {
+    font-size: 14px;
+  }
+  .letters p {
+    top: 98px;
+    right: 5px;
+  }
+  .box-container:after {
+    width: 320px;
+    margin: 0 20px 30px 20px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .box-design > h1 {
+    font-size: 5.5vw;
+  }
+}
+
 
 
 /* manuscript event */

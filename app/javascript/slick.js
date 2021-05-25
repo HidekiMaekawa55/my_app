@@ -37,7 +37,6 @@
           breakpoint: 600,
           settings: {
             centerMode: false,
-            dots: false,
           }
         },
       ]
