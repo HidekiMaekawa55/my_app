@@ -6,5 +6,8 @@
     <%= link_to "削除", manuscript_path(@manuscript), method: :delete, data: { confirm: "You sure?" } %>
   <% end %>
   <h1><%= @manuscript.title %></h1>
+  <% if @manuscript.image? %>
+    <%= image_tag "#{@manuscript.image}" %>
+  <% end %>
   <p><%= @manuscript.content %></p>
 </div>

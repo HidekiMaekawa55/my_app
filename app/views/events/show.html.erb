@@ -7,5 +7,8 @@
                                      data: { confirm: "You sure?" }%>
   <% end %>
   <h1><%= @event.title %></h1>
+  <% if @event.image? %>
+    <%= image_tag "#{@event.image}" %>
+  <% end %>
   <p><%= @event.content %></p>
 </div>
