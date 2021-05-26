@@ -282,6 +282,7 @@ input {
   width: 100%;
   box-shadow: 2px 2px 10px black;
   transition: 0.4s;
+  object-fit: cover;
 }
 .slider img:hover {
   opacity: 0.8;
@@ -350,20 +351,20 @@ input {
 
 picture > img {
   width: 100%;
-  height: 64%;
+  height: 67%;
+  object-fit: cover;
 }
 
 .letters {
   margin: 0 auto;
   width: 100%;
-  height: 36%;
+  height: 33%;
   transition: 0.7s;
   text-decoration: none;
   color: black;
   position: relative;
-  
-  background: rgba(0, 3, 51, 0.8);
-  color: white;
+  background: rgba(247, 229, 199, 0.2);
+  color: black;
 }
 
 .letters h2 {
@@ -424,16 +425,13 @@ picture > img {
   }
   .frame {
     display: flex;
-    width: 95%;
+    width: 100%;
     height: 32vw;
     margin: 0 auto 3.73333vw;
     box-shadow: 0.2rem 0.2rem 0.6rem;
   }
-  .letters h2 {
-    font-size: 3.46667vw;
-  }
   .frame > picture {
-    width: 32%;
+    width: 36%;
   }
   .frame > picture > img {
     height: 100%;
@@ -441,7 +439,12 @@ picture > img {
   }
   .frame > .letters {
     height: 100%;
-    width: 68%;
+    width: 64%;
+    background: rgba(0, 3, 51, 0.8);
+    color: white;
+  }
+  .frame > .letters h2 {
+    font-size: 3.46667vw;
   }
   .frame > .letters > p {
     font-size: 3.2vw;
@@ -487,11 +490,22 @@ picture > img {
 }
 
 .pagination {
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   float: right;
-  width: 239px;
-  height: 40px;
+}
+
+.page {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .pate {
+    display: none;
+  }
+  .page {
+    display: initial;
+  }
 }
 
 

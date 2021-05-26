@@ -50,7 +50,8 @@
           </div>
         <% end %>
         
-        <%= will_paginate @likes %>
+        <%= will_paginate @likes, class: "pate" %>
+        <%= will_paginate @likes,previous_label: h("<"), next_label: h(">"), class: "page" %>
       <% end %>
     <% end %>
   </div>

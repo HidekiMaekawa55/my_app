@@ -16,7 +16,11 @@
       <%= link_to manuscript_path(manuscript) do %> 
         <div class="frame">
           <picture>
-            <%= image_tag "static_pages/nanzan_logo.jpg" %>
+            <% if manuscript.image? %>
+              <%= image_tag "#{manuscript.image}" %>
+            <% else %>
+              <%= image_tag "static_pages/nanzan_logo.jpg" %>
+            <% end %>
           </picture>
           <div class="letters">
             <h2><%= manuscript.title %></h2>
@@ -35,7 +39,11 @@
       <%= link_to event_path(event) do %>
         <div class="frame">
           <picture>
-            <%= image_tag "static_pages/orange.jpg" %>
+            <% if event.image? %>
+              <%= image_tag "#{event.image}" %>
+            <% else %>
+              <%= image_tag "static_pages/nanzan_logo.jpg" %>
+            <% end %>
           </picture>
           <div class="letters">
             <h2><%= event.title %></h2>

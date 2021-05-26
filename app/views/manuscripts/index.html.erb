@@ -8,12 +8,14 @@
     </div>
   <% end %>
   
-  <%= will_paginate %>
+  <%= will_paginate class: "pate" %>
+  <%= will_paginate previous_label: h("<"), next_label: h(">"), class: "page" %>
    
   <div class="box-container">
     <%= render @manuscripts %>
   </div>
   
-  <%= will_paginate %>
+  <%= will_paginate class: "pate" %>
+  <%= will_paginate previous_label: h("<"), next_label: h(">"), class: "page" %>
   
 </div>
