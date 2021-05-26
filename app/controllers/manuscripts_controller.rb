@@ -43,9 +43,8 @@ class ManuscriptsController < ApplicationController
   end
   
   private
-  
     def manuscript_params
-      params.require(:manuscript).permit(:title, :content)
+      params.require(:manuscript).permit(:title, :content, :image)
     end
-  
+    
 end

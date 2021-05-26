@@ -361,6 +361,9 @@ picture > img {
   text-decoration: none;
   color: black;
   position: relative;
+  
+  background: rgba(0, 3, 51, 0.8);
+  color: white;
 }
 
 .letters h2 {
@@ -1032,10 +1035,9 @@ picture > img {
 }
 
 
-/* static_pages/about */
-.static-pages-about {
-  text-align: center;
-  margin-top: 50px;
+/* form */
+form input[type="file"] {
+  border: none;
 }
 
 

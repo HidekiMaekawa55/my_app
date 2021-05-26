@@ -1,7 +1,11 @@
 <%= link_to manuscript_path(manuscript) do %>
   <div class="frame">
     <picture>
-      <%= image_tag "static_pages/blue1.jpg" %>
+      <% if manuscript.image? %>
+        <%= image_tag "#{manuscript.image}" %>
+      <% else %>
+        <%= image_tag "static_pages/nanzan_logo.jpg" %>
+      <% end %>
     </picture>
     <div class="letters">
       <h2><%= manuscript.title %></h2>
