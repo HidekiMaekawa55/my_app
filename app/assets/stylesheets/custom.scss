@@ -768,19 +768,17 @@ picture > img {
 /* club */
 
 .club-show {
-  margin-top: 50px;
-  width: 820px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80%;
+  margin: 50px auto 0;
+  text-align: center;
 }
 
 .club-show > a {
   display: inline-block;
   background: rgba(42, 137, 155, 1);
-  width: 820px;
+  width: 100%;
   height: 50px;
   margin-top: 30px;
-  text-align: center;
   color: white;
   line-height: 50px;
   border-radius: 5px;
@@ -794,21 +792,23 @@ picture > img {
   background: orange;
 }
 
-.club-show > h1,p {
-  text-align: center;
-}
-
 .club-pic {
   margin-top: 20px;
 }
 
+.club-pic img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .club-content {
-  width: 820px;
+  width: 100%;
   padding: 30px 0;
+  text-align: left;
 }
 
 .club-table {
-  width: 820px;
+  width: 100%;
 }
 
 .club-table td:nth-child(1) {
@@ -819,6 +819,7 @@ picture > img {
 .club-table td {
   padding: 20px;
   white-space: pre-line; 
+  text-align: left;
 }
 
 .club-likes h1 {
@@ -913,16 +914,87 @@ picture > img {
 }
 
 
-/* manager */
-.manager {
-  background: rgba(237, 222, 178, 0.3);
-  text-align: center;
-  height: 2800px;
-  margin: 0 -150px -180px;
-  padding-top: 50px;
+@media (max-width: 1200px) {
+  .club_index {
+    width: 100%;
+  }
 }
 
-.manager > .container {
+
+@media (max-width: 992px) {
+  .club-show {
+    width: 100%;
+  }
+  .club-pic > img {
+    height: 400px;
+  }
+  .club_index > .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .club_index > .items a {
+    width: 48%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .club-show {
+    width: 93%;
+  }
+  .club-show h1 {
+    font-size: 6vw;
+  }
+  .club-pic > img {
+    height: 50vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .club-show {
+    width: 100%;
+  }
+  .club-pic > img {
+    height: 52vw;
+  }
+  .club-table td {
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .club_index > .items a {
+    width: 98%;
+    margin-right: 0;
+  }
+  .club_index > h1 {
+    margin-bottom: 20px;
+    font-size: 6vw;
+  }
+}
+
+
+/* manager */
+.test {
+  background: rgba(237, 222, 178, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.manager {
+  text-align: center;
+  margin: 50px auto 0;
+}
+
+.manager-container {
+  margin: 0 auto;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -933,42 +1005,26 @@ picture > img {
   margin-top: 0;
 }
 
-.manager > h2 {
-  font-weight: bold;
+.manager-container > .pic {
+  width: 40%;
 }
 
-.manager .pic {
-  width: 35%;
-}
-
-.manager .pic img {
+.manager-container > .pic img {
   width: 200px;
   border-radius: 50%;
   display: block;
   margin-left: auto;
 }
 
-.manager .content {
-  width: 45%;
+.manager-container > .content {
+  width: 47%;
   text-align: left;
   align-self: center;
   margin: 0;
 }
 
-.manager .content p {
-  text-align: left;
-}
-
-.manager .content p:first-child {
-  margin-top: 10px;
-}
-
-.manager .content p:last-child {
-  margin-bottom: 0;
-}
-
 .introduction {
-  width: 800px;
+  width: 73%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -978,8 +1034,9 @@ picture > img {
   margin-top: 100px;
 }
 
-.introduction p {
+.introduction > p {
   line-height: 2em;
+  text-align: left;
 }
 
 .introduction .languages {
@@ -1025,6 +1082,85 @@ picture > img {
 
 .future {
   padding-bottom: 25px;
+}
+
+
+@media (max-width: 1200px) {
+  .introduction {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .introduction {
+    width: 95%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .manager-container {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .manager-container > .pic {
+    width: 100%;
+    text-align: center;
+  }
+  .manager-container > .content {
+    width: 226px;
+    margin: 20px auto 0;
+    padding-left: 2px;
+  }
+  .manager > h1 {
+    font-size: 6vw;
+    margin-bottom: 4.3vh;
+  }
+  .manager-container > .pic img {
+    width: 40vw;
+    display: inline-block;
+  }
+  .introduction h2 {
+    font-size: 4.8vw;
+    margin-top: 7vh;
+    margin-bottom: 0;
+  }
+  .introduction > P {
+    line-height: 1.7em;
+  }
+  .languages > .item{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    color: white;
+  }
+  .languages > .item h1 {
+    font-size: 4.3vw;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .languages > .future {
+    padding-bottom: 15px;
+  }
+  .languages > .item p {
+    font-size: 4.3vw;
+  }
+  .languages > .item table tr {
+    font-size: 3.8vw;
+  }
+  .languages > .item table td {
+    padding: 5px 0;
+  }
+  .languages > .item table th {
+    padding-top: 15px;
+  }
+  .languages > .item table tr:last-child td {
+    padding-bottom: 10px;
+  }
 }
 
 
