@@ -150,7 +150,6 @@ nav {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
   color: #777;
   clear: both;
 }
@@ -170,11 +169,22 @@ footer small {
 footer ul {
   float: right;
   list-style: none;
+  margin-bottom: 33px;
 }
 
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+
+@media (max-width: 600px) {
+  footer {
+    margin-top: 10px;
+  }
+  footer ul {
+    margin-bottom: 25px;
+  }
 }
 
 
@@ -228,7 +238,6 @@ input {
   margin-bottom: 32px;
 }
 
-
 .radio [type="radio"] {
   display: inline-block;
   width: 55px;
@@ -236,8 +245,9 @@ input {
 }
 
 .radio table  {
-  width: 600px;
+  width: 100%;
 }
+
 
 
 
@@ -1266,25 +1276,25 @@ picture > img {
 }
 
 
-/* contacts  */
+/* contact  */
 .contact-new p {
   margin-top: 30px;
   margin-bottom: 10px;
 }
   
-.contact-admin {
-  width: 840px;
+.contact-index {
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-.contact-admin > h1 {
+.contact-index > h1 {
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
-.contact-admin .admin-box {
+.contact-index .admin-box {
   border: 1px solid black;
   margin-bottom: 10px;
   display: flex;
@@ -1292,22 +1302,16 @@ picture > img {
   align-items: center;
 }
 
-.contact-admin .admin-box > p {
-  font-size: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 0;
-  width: 700px;
+.contact-index .admin-box > p {
+  margin: 0;
+  width: 100%;
   text-align: left;
 }
 
-.contact-admin .admin-box > p:last-child {
-  width: 180px;
+.contact-index .admin-box > p:last-child {
+  width: 40%;
 }
 
-
-
-/* contact */
 .personal-information h3 {
   font-size: 18px;
   margin-top: 50px;
@@ -1318,10 +1322,21 @@ picture > img {
 }
 
 
+@media (max-width: 600px) {
+  .contact-index {
+    width: 100%;
+  }
+  
+  .form-title h1 {
+    font-size: 6.6vw;
+  }
+}
+
+
 
 /* users */
 .users-show {
-  width: 820px;
+  width: 80%;
   margin: 50px auto 0;
   text-align: center;
 }
@@ -1332,8 +1347,8 @@ picture > img {
 }
 
 .users-show table {
-  margin: 0 auto;
-  width: 600px;
+  margin: 0 auto 20px;
+  width: 100%;
 }
 
 .users-show table td:first-child {
@@ -1343,16 +1358,22 @@ picture > img {
 }
 
 
+@media (max-width: 600px) {
+  .users-show {
+    width: 100%;
+  }
+  .users-show > h1 {
+    font-size: 6.5vw;
+  }
+  .users-show > h3 {
+    font-size: 5.5vw;
+  }
+}
+
+
 /* form */
 form input[type="file"] {
   border: none;
 }
 
 
-
-/* tablet css */
-@media (max-width: 1024px) {
-  .container {
-    
-  }
-}
