@@ -6,6 +6,10 @@
 
 /* 全体 */
 
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
 body > .container {
   margin-top: 122px;
 }
