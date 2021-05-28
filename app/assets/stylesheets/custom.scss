@@ -239,9 +239,13 @@ input {
 }
 
 .radio [type="radio"] {
-  display: inline-block;
-  width: 55px;
-  float: left;
+  width: auto;
+  margin: 0 0 0 2px !important;
+  position: relative !important;
+}
+
+.radio label {
+  padding-left: 5px;
 }
 
 .radio table  {
@@ -1365,7 +1369,7 @@ picture > img {
     font-size: 6.5vw;
   }
   .users-show > h3 {
-    font-size: 5.5vw;
+    font-size: 4.5vw;
   }
 }
 
