@@ -943,7 +943,7 @@ picture > img {
 .club-likes-user-box {
   margin-bottom: 10px;
   border: 1px solid black;
-  width: 820px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -952,7 +952,7 @@ picture > img {
 
 .club-likes-user-box p {
   margin: 0;
-  width: 200px;
+  width: 25%;
   text-align: left;
   line-height: 30px;
 }
@@ -962,7 +962,7 @@ picture > img {
 }
 
 .club-likes-user-box .mail {
-  width: 300px;
+  width: 50%;
 }
 
 
@@ -974,7 +974,6 @@ picture > img {
 .club_index > h1 {
   margin-bottom: 20px;
   font-size: 28px;
-  text-shadow: 1px 1px 1px black;
 }
 
 .club_index > .items {
