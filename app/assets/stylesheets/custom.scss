@@ -795,7 +795,7 @@ picture > img {
   margin-right: 3px;
   margin-left: 3px;
   margin-bottom: 5px;
-  width: 100%;
+  width: calc(100% - 6px);
 }
 
 
@@ -1382,5 +1382,3 @@ picture > img {
 form input[type="file"] {
   border: none;
 }
-
-
