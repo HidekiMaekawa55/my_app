@@ -17,9 +17,15 @@
   <%= link_to "授業評価を書く", new_credit_path %> 
   
   <div class="order">
-    <%= link_to "新しい順", credits_path, id: "select_order" %>
-    <%= link_to "単位取得度順", credits_easy_path %>
-    <%= link_to "内容充実度が高い順", credits_full_path %>
+		<%= link_to credits_path, id: "select_order" do %>
+		  新しい<span>順</span>
+		<% end %>
+		<%= link_to credits_easy_path do %>
+		  単位取得度<span>順</span>
+		<% end %>
+		<%= link_to credits_full_path do %>
+		  内容充実度<span>が高い順</span>
+		<% end %>
   </div>
   
   <% @credits.each do |credit| %>
@@ -64,15 +70,15 @@
       
       <dl class="credit-container">
         <div class="attendance common">
-          <dt>出席</dt>
-          <dd><%= credit.attendance %></dd>  
+          <dt><p>出席</p></dt>
+          <dd><p><%= credit.attendance %></p></dd>  
         </div>
         <div class="text common">
-          <dt>教科書</dt>
+          <dt><p>教科書</p></dt>
           <dd><%= credit.textbook %></dd>
         </div>
         <div class="test common">
-          <dt>テスト情報</dt>
+          <dt><p>テスト<span>情報</span></p></dt>
           <dd>中間：<%= credit.mid_test_format %>　期末：<%= credit.final_test_format %>　持ち込み：<%= credit.item %></dd>
         </div>
       </dl>
