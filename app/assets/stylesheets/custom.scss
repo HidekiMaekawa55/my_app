@@ -609,10 +609,12 @@ picture > img {
   margin: 0;
   width: 200px;
   line-height: 20px;
+  height: 20px !important;
 }
 
 .search-submit input {
   line-height: 20px;
+  height: 20px !important;
   margin: 0;
 }
 
@@ -819,10 +821,12 @@ picture > img {
   }
   .search-input #word {
     width: 32vw;
+    height: 18px !important;
     line-height: 18px;
   }
   .search-submit input {
     line-height: 18px;
+    height: 18px !important;
     padding-right: 3px;
     padding-left: 3px;
   }
