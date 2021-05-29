@@ -256,6 +256,9 @@ input {
   width: 100%;
 }
 
+form input[type="file"] {
+  border: none;
+}
 
 
 
@@ -605,9 +608,11 @@ picture > img {
 .search-input #word {
   margin: 0;
   width: 200px;
+  line-height: 20px;
 }
 
 .search-submit input {
+  line-height: 20px;
   margin: 0;
 }
 
@@ -813,10 +818,13 @@ picture > img {
     display: none;
   }
   .search-input #word {
-    width: 25vw;
+    width: 32vw;
+    line-height: 18px;
   }
   .search-submit input {
-    padding: 1px 4px;
+    line-height: 18px;
+    padding-right: 3px;
+    padding-left: 3px;
   }
   .credit-index > h1 {
     margin-top: 13px;
@@ -1375,10 +1383,4 @@ picture > img {
   .users-show > h3 {
     font-size: 4.5vw;
   }
-}
-
-
-/* form */
-form input[type="file"] {
-  border: none;
 }
