@@ -19,7 +19,6 @@ RSpec.describe 'site layout', type: :system do
       is_expected.to have_link 'Home',           href: root_path
       is_expected.to have_link 'ご意見・ご要望', href: new_contact_path
       is_expected.to have_link '開発者紹介',     href: manager_path
-      is_expected.to have_link 'NJSの狙い',      href: about_path
     end
   end
   context 'Access to root_path when logged in' do

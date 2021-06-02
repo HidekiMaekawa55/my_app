@@ -1,6 +1,6 @@
 <%= provide(:title, @manuscript.title) %>
 
-<div class="manuscript-event-contact-show">
+<div class="page-visual">
   <% if current_user && current_user.admin? %>
     <%= link_to "編集", edit_manuscript_path(@manuscript) %>
     <%= link_to "削除", manuscript_path(@manuscript), method: :delete, data: { confirm: "You sure?" } %>

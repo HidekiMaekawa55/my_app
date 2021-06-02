@@ -1,16 +1,10 @@
-<div class="club-show">
-  <h1><%= @club.name %></h1>
+<div class="page-visual">
   <% if current_user && current_user.admin? %>
-    <p><%= link_to "編集", edit_club_path(@club) %></p>
+    <%= link_to "編集", edit_club_path(@club) %>
   <% end %>
-
-  <div class="club-pic">
-    <%= image_tag "club/club#{@club.id}.jpg" %>
-  </div>
-  
-  <div class="club-content">
-    <%= @club.content %>
-  </div>
+  <h1><%= @club.name %></h1>
+  <%= image_tag "club/club#{@club.id}.jpg" %>
+  <p><%= @club.content %></p>
   
   <% unless @club.date.blank? %>
   <table border="1" class="club-table">
@@ -35,23 +29,25 @@
   </table>
   <% end %>
   
-  <%= link_to "話を聞きたい", "/likes/#{@club.id}/create",
-      data: {confirm: "あたなの情報を送信します。よろしいですか？"} %>
+  <div class="do-like">
+    <%= link_to "話を聞きたい", "/likes/#{@club.id}/create",
+        data: {confirm: "あたなの情報を送信します。よろしいですか？"} %>
+  </div>
   
-  <div class="club-likes">
+  <div class="club-lovers">
     <% if current_user %>
       <% if (current_user.email == @club.email) || current_user.admin?  %>
         <h1>興味を持ってくれている方々</h1>
         <% @likes.each do |like| %>
-          <div class="club-likes-user-box">
+          <div class="information-box">
             <p><%= like.user.name %></p>
             <p class="mail"><%= like.user.email %></p>
-            <p><%= like.created_at.to_s(:datetime_jp) %></p>
+            <p class="date"><%= like.created_at.to_s(:datetime_jp) %></p>
           </div>
         <% end %>
         
-        <%= will_paginate @likes, class: "pate" %>
-        <%= will_paginate @likes,previous_label: h("<"), next_label: h(">"), class: "page" %>
+        <%= will_paginate @likes, class: "pagination-pc" %>
+        <%= will_paginate @likes,previous_label: h("<"), next_label: h(">"), class: "pagination-phone" %>
       <% end %>
     <% end %>
   </div>

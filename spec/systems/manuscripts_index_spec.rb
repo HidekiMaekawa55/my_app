@@ -24,10 +24,6 @@ RSpec.describe 'ManuscriptsIndex', type: :system do
     it "has 'News投稿' link" do
       is_expected.to have_link 'News投稿', href: new_manuscript_path
     end
-    it "has '編集' and '削除' link" do
-      is_expected.to have_link '編集', href: edit_manuscript_path(manuscript_last)
-      is_expected.to have_link '削除', href: manuscript_path(manuscript_last)
-    end
   end
   
   context 'Access to manuscript/index as non_admin user' do
