@@ -2,10 +2,10 @@ class CreditsController < ApplicationController
   before_action :admin_user, only: [:destroy]
   
   def index
-    if params[:class_name]
-      @credits = Credit.paginate(page: params[:page]).where('teacher_name Like ? and class_name Like ?', params[:teacher_name], params[:class_name] ).order("created_at DESC")
+    if (teacher_name = params[:teacher_name]) && (class_name = params[:class_name])
+      @credits = Credit.paginate(page: params[:page]).target(teacher_name, class_name)
     else
-      @credits = Credit.paginate(page: params[:page]).order("created_at DESC")
+      @credits = Credit.paginate(page: params[:page]).change_order('created_at')
     end
   end
 
@@ -36,27 +36,21 @@ class CreditsController < ApplicationController
   end
   
   def search
-    @word = params[:word]
-    @words = @word.gsub(/　/," ").lstrip.split(/[[:blank:]]+/)
+    @words = Credit.word_split(params[:word])
     if @words.length >= 3
       flash[:danger] = "３単語以上で検索をすることはできません。"
       redirect_to credits_path
     else
-      @searches = Credit.where('teacher_name Like ? and class_name Like ?', "%#{@words[0]}%", "%#{@words[1]}%")
-      if !@searches.blank?
-        @searches
-      else @searches = Credit.where('teacher_name Like ? and class_name Like ?', "%#{@words[1]}%", "%#{@words[0]}%")
-        @searches
-      end
+      @searches = Credit.word_search(@words)
     end
   end
   
   def easy
-    @credits = Credit.paginate(page: params[:page]).order("ease DESC")
+    @credits = Credit.paginate(page: params[:page]).change_order('ease')
   end
   
   def full
-    @credits = Credit.paginate(page: params[:page]).order("fulfillment DESC")
+    @credits = Credit.paginate(page: params[:page]).change_order('fulfillment')
   end
   
   private

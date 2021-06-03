@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-    @manuscripts = Manuscript.limit(6).order("created_at DESC")
-    @events = Event.limit(6).order("created_at DESC")
+    @manuscripts = Manuscript.limit_order(6, 'created_at')
+    @events = Event.limit_order(6, 'created_at')
   end
 
   def about

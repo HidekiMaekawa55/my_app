@@ -3,8 +3,7 @@
 <div class="page-visual">
   <% if current_user && current_user.admin? %>
     <%= link_to "編集", edit_event_path(@event) %>
-    <%= link_to "削除", event_path(@event), method: :delete,
-                                     data: { confirm: "You sure?" }%>
+    <%= link_to "削除", event_path(@event), method: :delete, data: { confirm: "You sure?" }%>
   <% end %>
   <h1><%= @event.title %></h1>
   <% if @event.image? %>
