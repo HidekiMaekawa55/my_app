@@ -1,9 +1,9 @@
-<h1>NJS</h1>
+<h1>NJSへようこそ</h1>
 
-<p>Hi <%= @user.name %>,</p>
+<p>こんちちは、<%= @user.name %>さん</p>
 
 <p>
-Welcome to the NJS! Click on the link below to activate your account:
+下記のリンクをクリックすれば、アカウント設定が完了します。
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@user.activation_token,
