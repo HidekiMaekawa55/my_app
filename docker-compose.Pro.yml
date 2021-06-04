@@ -21,6 +21,7 @@ services:
       - db 
     ports:
       - "3000:3000"
+    env_file: development.env
     volumes:
       - .:/my_app:cached 
       - tmp-data:/my_app/tmp/sockets

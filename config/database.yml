@@ -30,7 +30,3 @@ production:
   password: <%= ENV.fetch("DB_PASSWORD") %>
   timeout: 5000
   host: <%= ENV.fetch("DB_HOST") %>
-  
-  # database: my_app
-  # username: root
-  # password: password
