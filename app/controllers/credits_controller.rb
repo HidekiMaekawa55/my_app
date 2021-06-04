@@ -19,7 +19,7 @@ class CreditsController < ApplicationController
       flash[:success] = "Thank you for your university information"
       redirect_to credits_path
     else
-      flash.now[:danger] = @credit.errors.full_messages
+      flash.now[:danger] = "未記入の情報があります。"
       render :new
     end
   end

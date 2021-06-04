@@ -376,7 +376,6 @@ body {
   
 
 /* footer */
-
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -411,7 +410,6 @@ footer {
 
 
 /* debug */
-
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -428,7 +426,6 @@ footer {
 
 
 /* forms */
-
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -497,6 +494,7 @@ form input[type="file"] {
 }
 
 .field_with_errors {
+  display: contents;
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
