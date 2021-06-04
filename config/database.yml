@@ -25,8 +25,12 @@ production:
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: my_app
-  username: root
-  password: password
+  database: <%= ENV.fetch("DB_DATABASENAME") %>
+  username: <%= ENV.fetch("DB_USERNAME") %>
+  password: <%= ENV.fetch("DB_PASSWORD") %>
   timeout: 5000
-  host: db
+  host: <%= ENV.fetch("DB_HOST") %>
+  
+  # database: my_app
+  # username: root
+  # password: password
