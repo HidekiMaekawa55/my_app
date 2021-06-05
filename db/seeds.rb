@@ -13,12 +13,12 @@ User.create!(name:  "南山太郎",
             activated: true,
             activated_at: Time.zone.now)
       
-40.times do             
+25.times do             
     Manuscript.create!(title: "Example",
                       content: "example,example,example,example")
 end
 
-40.times do             
+25.times do             
     Event.create!(title: "Example",
                       content: "example,example,example,example")
 end
@@ -2286,3 +2286,4 @@ Credit.create!(undergraduate: "経営学部",
                textbook: "教科書必要",
                comment: "テスト勉強にしっかりと時間を取る必要があります。"
                )
+        
