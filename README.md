@@ -4,7 +4,7 @@
 レスポンシブ対応しているので、スマホからも確認いただけます。
 
 ## デモ動画
-![Videotogif](https://user-images.githubusercontent.com/77489664/120890739-a8132b80-c63f-11eb-84bf-8e541240fa46.gif)
+![Videotogif-9](https://user-images.githubusercontent.com/77489664/120893530-c2a0d100-c64e-11eb-9104-0dbb246c3904.gif)
 
 ## URL
 [NJSへようこそ](http://ec2-35-73-250-89.ap-northeast-1.compute.amazonaws.com)
