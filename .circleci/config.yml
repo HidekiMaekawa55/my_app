@@ -8,9 +8,7 @@ commands:
   setup:
     steps:
       - checkout
-      #orbsのおかげでこの記述でbundle installをやってくれる
       - ruby/install-deps
-      #nodeパッケージをインストールしてキャッシュを自動的に有効にする。
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
@@ -23,25 +21,22 @@ jobs:
       - setup
   test:
     docker:
-      - image: circleci/ruby:2.7-node
+      - image: circleci/ruby:2.7-node-browsers
       - image: circleci/postgres:11.6-alpine
         name: "db"
         environment:
           POSTGRES_USER: postgres
-          POSTGRES_DB: myapp_test
-          POSTGRES_PASSWORD: ""
+          POSTGRES_DB: my_app_test
+          POSTGRES_PASSWORD: password
     environment:
       BUNDLE_JOBS: "4"
       BUNDLE_RETRY: "3"
       PGHOST: 127.0.0.1
       PGUSER: postgres
-      PGPASSWORD: ""
+      PGPASSWORD: password
       RAILS_ENV: test
     steps:
       - setup
-      - run:
-          name: rails db:migrate
-          command: bundle exec rails db:migrate
       - run:
           name: Database setup
           command: bundle exec rails db:schema:load --trace
