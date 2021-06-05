@@ -2,11 +2,13 @@ version: '3'
 
 services:
   db:
-    image: nouchka/sqlite3:latest
+    image: postgres
     tty: true
     stdin_open: true
+    environment:
+      - POSTGRES_PASSWORD=password 
     volumes:
-      - ./db:/var/lib/sqlite3
+      - ./db/postgres:/var/lib/postgresql/data 
       
   web:
     build: 
